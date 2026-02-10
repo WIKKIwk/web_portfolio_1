@@ -30,7 +30,7 @@ const missionItems: MissionItem[] = [
 **Bizning qadriyatlarimiz**
 
 Biz reabilitatsiyaga nafaqat jismoniy mashqlar, balki bolaning ruhiy xotirjamligi va rivojlanishidagi har bir kichik "zina" (stupenka) sifatida qaraymiz. Biz bilan har bir qadam ishonchli, har bir natija esa quvonchlidir!`,
-        imageSrc: "/mission_intro.svg",
+        imageSrc: `${import.meta.env.BASE_URL}mission_intro.svg`,
         imageAlt: "Stupenki Kids - Intro",
         isIntro: true
     },
@@ -38,7 +38,7 @@ Biz reabilitatsiyaga nafaqat jismoniy mashqlar, balki bolaning ruhiy xotirjamlig
         id: 1,
         title: "Har bir qadamda biz siz bilanmiz.",
         text: "\"Stupenki Kids\" — bu shunchaki reabilitatsiya markazi emas, bu farzandingizning kichik g'alabalaridan katta muvaffaqiyatlar sari qurilgan yo'ldir. Biz har bir bolajonning qobiliyatiga ishonamiz va ularning rivojlanish zinalaridan dadil ko'tarilishiga mehr bilan ko'maklashamiz.",
-        imageSrc: "/mission_kids.svg",
+        imageSrc: `${import.meta.env.BASE_URL}mission_kids.svg`,
         imageAlt: "Mission illustration - Helping kids",
         reverse: false
     },
@@ -46,7 +46,7 @@ Biz reabilitatsiyaga nafaqat jismoniy mashqlar, balki bolaning ruhiy xotirjamlig
         id: 2,
         title: "Harakat erkinligini his eting.",
         text: "Bizning markazimizda qo'llaniladigan Ekzarta va PNF kabi zamonaviy usullar farzandingizga o'z tanasini boshqarishni o'rgatadi. Maxsus osma tizimlar yordamida bajariladigan mashqlar nafaqat mushaklarni mustahkamlaydi, balki bolajonlarga harakatlanish quvonchini va parvoz zavqini hadya etadi.",
-        imageSrc: "/mission_freedom.svg",
+        imageSrc: `${import.meta.env.BASE_URL}mission_freedom.svg`,
         imageAlt: "Mission illustration - Freedom of movement",
         reverse: true
     },
@@ -54,7 +54,7 @@ Biz reabilitatsiyaga nafaqat jismoniy mashqlar, balki bolaning ruhiy xotirjamlig
         id: 3,
         title: "To'g'ri tashxis — muvaffaqiyatli davolash garovi.",
         text: "Bizning markazimizda UZI va neyrologik diagnostika eng zamonaviy uskunalar yordamida, mutaxassislar nazorati ostida o'tkaziladi. Farzandingiz sog'lig'idagi har bir o'zgarishni va rivojlanish jarayonini aniq tahlil qilish orqali biz eng samarali davolash rejasini tuzamiz. Aniqlik va tajriba — bizning bosh mezonimiz.",
-        imageSrc: "/mission_diagnosis.svg",
+        imageSrc: `${import.meta.env.BASE_URL}mission_diagnosis.svg`,
         imageAlt: "Mission illustration - Diagnosis",
         reverse: false
     },
@@ -62,7 +62,7 @@ Biz reabilitatsiyaga nafaqat jismoniy mashqlar, balki bolaning ruhiy xotirjamlig
         id: 4,
         title: "Sog'lom o'sish — bizning g'amxo'rligimizda.",
         text: "Bolajonlarning oyoq kafti va umurtqa pog'onasi bilan bog'liq muammolarini (yassi oyoqlik, skolioz) zamonaviy usullar bilan bartaraf etamiz. Shifokorlarimizning ehtiyotkor qo'llari va xalqaro tajribasi farzandingizning qadamlarini ishonchli va og'riqsiz qiladi. Kichik g'alabalardan katta natijalar sari birga boramiz!",
-        imageSrc: "/mission_ortho.svg",
+        imageSrc: `${import.meta.env.BASE_URL}mission_ortho.svg`,
         imageAlt: "Mission illustration - Healthy Growth",
         reverse: true
     }
