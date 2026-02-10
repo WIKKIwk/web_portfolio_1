@@ -38,7 +38,7 @@ export function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-                            className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+                            className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                         >
                             <Button size="lg">
                                 {t('hero.buttons.book')}
