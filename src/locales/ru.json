@@ -1,0 +1,35 @@
+{
+    "nav": {
+        "about": "О нас",
+        "services": "Услуги",
+        "contact": "Контакты",
+        "book": "Записаться"
+    },
+    "hero": {
+        "title_highlight": "Stupenki Kids",
+        "title_main": "Детская Нейрореабилитация",
+        "description": "В нашем центре предоставляются современные методы терапии (Войта, Бобат, ПНФ) и услуги квалифицированных специалистов для развития вашего ребенка.",
+        "buttons": {
+            "book": "Записаться на прием",
+            "services": "Наши услуги"
+        },
+        "badges": {
+            "specialists": "Специалисты международного уровня",
+            "rating": "4.9 Рейтинг (2GIS/Yandex)"
+        }
+    },
+    "theme": {
+        "light": "Ночной режим",
+        "dark": "Дневной режим"
+    },
+    "footer": {
+        "map_title": "Найти нас на карте",
+        "address_label": "Адрес:",
+        "phone_label": "Телефон:",
+        "instagram_label": "Instagram:",
+        "facebook_label": "Facebook:",
+        "links_title": "Быстрые ссылки",
+        "contact_title": "Контакты",
+        "copyright": "© {{year}} Stupenki Kids. Все права защищены."
+    }
+}

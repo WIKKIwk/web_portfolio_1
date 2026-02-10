@@ -1,0 +1,35 @@
+{
+    "nav": {
+        "about": "About Us",
+        "services": "Services",
+        "contact": "Contact",
+        "book": "Book Now"
+    },
+    "hero": {
+        "title_highlight": "Stupenki Kids",
+        "title_main": "Pediatric Neurorehabilitation",
+        "description": "Our center provides modern therapy methods (Vojta, Bobath, PNF) and qualified specialists for your child's development.",
+        "buttons": {
+            "book": "Book Appointment",
+            "services": "Our Services"
+        },
+        "badges": {
+            "specialists": "internationally trained specialists",
+            "rating": "4.9 Rating (2GIS/Yandex)"
+        }
+    },
+    "theme": {
+        "light": "Night Mode",
+        "dark": "Day Mode"
+    },
+    "footer": {
+        "map_title": "Find us on map",
+        "address_label": "Address:",
+        "phone_label": "Phone:",
+        "instagram_label": "Instagram:",
+        "facebook_label": "Facebook:",
+        "links_title": "Quick Links",
+        "contact_title": "Contact",
+        "copyright": "© {{year}} Stupenki Kids. All rights reserved."
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "nav": {
+        "about": "Biz Haqimizda",
+        "services": "Xizmatlar",
+        "contact": "Bog'lanish",
+        "book": "Qabulga Yozilish"
+    },
+    "hero": {
+        "title_highlight": "Stupenki Kids",
+        "title_main": "Bolalar Neyroreabilitatsiyasi",
+        "description": "Bizning markazda farzandingiz rivojlanishi uchun zamonaviy terapiya usullari (Vojta, Bobat, PNF) va malakali mutaxassislar xizmat ko'rsatadi.",
+        "buttons": {
+            "book": "Qabulga Yozilish",
+            "services": "Xizmatlarimiz"
+        },
+        "badges": {
+            "specialists": "Chet elda o'qigan mutaxassislar",
+            "rating": "4.9 Reyting (2GIS/Yandex)"
+        }
+    },
+    "theme": {
+        "light": "Tungi rejim",
+        "dark": "Kunduzgi rejim"
+    },
+    "footer": {
+        "map_title": "Bizni xaritada toping",
+        "address_label": "Manzil:",
+        "phone_label": "Telefon:",
+        "instagram_label": "Instagram:",
+        "facebook_label": "Facebook:",
+        "links_title": "Tezkor Havolalar",
+        "contact_title": "Bog'lanish",
+        "copyright": "© {{year}} Stupenki Kids. Barcha huquqlar himoyalangan."
+    }
+}

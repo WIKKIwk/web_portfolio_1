@@ -1,0 +1,36 @@
+/* Simple icon styles using CSS */
+.icon-location::before {
+    content: '⌖';
+    font-size: 18px;
+}
+
+.icon-phone::before {
+    content: '☎';
+    font-size: 18px;
+}
+
+.icon-instagram::before {
+    content: '◉';
+    font-size: 18px;
+}
+
+.icon-users::before {
+    content: '⚉';
+    font-size: 18px;
+}
+
+.icon-check::before {
+    content: '✓';
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.icon-star::before {
+    content: '★';
+    font-size: 18px;
+}
+
+.icon-award::before {
+    content: '◈';
+    font-size: 24px;
+}
