@@ -90,6 +90,17 @@ export function Footer() {
                                 title="Stupenki Kids Location"
                                 className="grayscale-[20%] contrast-[1.1] saturate-[0.9]"
                             />
+
+                            {/* Custom Open in Yandex Button */}
+                            <a
+                                href="https://yandex.uz/maps/?text=Amir+Temur+prospekti+127+Toshkent"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="absolute top-4 right-4 bg-white dark:bg-brand-dark text-neutral dark:text-brand-pink px-4 py-2 rounded-full shadow-lg font-bold text-sm hover:scale-105 transition-transform z-10 flex items-center gap-2 border border-neutral/10 dark:border-brand-pink/20"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11" /></svg>
+                                Yandex Xarita
+                            </a>
                         </div>
 
                         {/* Decorative Corner Accent */}
