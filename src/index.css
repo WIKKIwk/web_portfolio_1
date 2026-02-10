@@ -16,7 +16,8 @@
 
 @layer utilities {
   .dark .svg-cream {
-    filter: invert(93%) sepia(19%) saturate(586%) hue-rotate(338deg) brightness(103%) contrast(94%);
+    /* Approximate filter for #F3ADA7 */
+    filter: invert(88%) sepia(16%) saturate(1209%) hue-rotate(305deg) brightness(97%) contrast(90%);
   }
 
   .animate-fadeIn {

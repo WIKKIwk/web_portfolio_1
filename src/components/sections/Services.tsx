@@ -58,7 +58,7 @@ const item = {
 
 export function Services() {
     return (
-        <section id="services" className="py-20 bg-background dark:bg-neutral-900">
+        <section id="services" className="py-20 bg-background dark:bg-brand-dark">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <motion.h2
@@ -66,7 +66,7 @@ export function Services() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="text-3xl md:text-4xl font-heading font-bold text-neutral dark:text-cream mb-4"
+                        className="text-3xl md:text-4xl font-heading font-bold text-neutral dark:text-brand-pink mb-4"
                     >
                         Bizning Asosiy <span className="text-primary">Xizmatlarimiz</span>
                     </motion.h2>
@@ -75,7 +75,7 @@ export function Services() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        className="text-neutral/70 dark:text-cream/80 text-lg"
+                        className="text-neutral/70 dark:text-brand-pink/80 text-lg"
                     >
                         Biz bolalar salomatligi uchun keng qamrovli tibbiy va reabilitatsiya xizmatlarini taqdim etamiz.
                     </motion.p>
@@ -97,8 +97,8 @@ export function Services() {
                             <div className="w-14 h-14 bg-secondary/20 dark:bg-primary/20 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:bg-primary transition-colors duration-300">
                                 {service.icon}
                             </div>
-                            <h3 className="text-xl font-bold font-heading mb-3 text-neutral dark:text-cream">{service.title}</h3>
-                            <p className="text-neutral/60 dark:text-cream/70 leading-relaxed mb-6">
+                            <h3 className="text-xl font-bold font-heading mb-3 text-neutral dark:text-brand-pink">{service.title}</h3>
+                            <p className="text-neutral/60 dark:text-brand-pink/70 leading-relaxed mb-6">
                                 {service.description}
                             </p>
                             <a href="#" className="font-semibold text-primary hover:text-primary/80 inline-flex items-center gap-2">

@@ -36,7 +36,7 @@ export function ThemeToggle() {
         <Button
             variant="ghost"
             onClick={toggleTheme}
-            className="group relative overflow-hidden rounded-full border border-neutral/10 dark:border-white/10 bg-white/50 dark:bg-neutral-800/50 px-5 py-2 text-sm font-medium text-neutral dark:text-cream transition-all hover:bg-white dark:hover:bg-neutral-800 hover:shadow-md active:scale-95"
+            className="group relative overflow-hidden rounded-full border border-neutral/10 dark:border-white/10 bg-white/50 dark:bg-neutral-800/50 px-5 py-2 text-sm font-medium text-neutral dark:text-brand-pink transition-all hover:bg-white dark:hover:bg-neutral-800 hover:shadow-md active:scale-95"
             aria-label="Toggle theme"
         >
             <span className="relative z-10 transition-transform duration-300 group-hover:-translate-y-0.5">

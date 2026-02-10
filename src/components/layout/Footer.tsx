@@ -8,7 +8,7 @@ export function Footer() {
     const { t } = useTranslation();
 
     return (
-        <footer id="contact" className="bg-brand-bg dark:bg-neutral-900 border-t border-neutral/10 dark:border-white/10 pt-16 pb-8 scroll-mt-20">
+        <footer id="contact" className="bg-brand-bg dark:bg-brand-dark border-t border-neutral/10 dark:border-white/10 pt-16 pb-8 scroll-mt-20">
             <div className="container mx-auto px-4 md:px-6">
                 {/* Contact Info Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
@@ -19,46 +19,46 @@ export function Footer() {
                             <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">
                                 SK
                             </div>
-                            <span className="text-xl font-heading font-bold text-neutral dark:text-cream">
+                            <span className="text-xl font-heading font-bold text-neutral dark:text-brand-pink">
                                 Stupenki Kids
                             </span>
                         </div>
-                        <p className="text-neutral/70 dark:text-cream/70 leading-relaxed">
+                        <p className="text-neutral/70 dark:text-brand-pink/70 leading-relaxed">
                             {t('hero.description')}
                         </p>
                     </div>
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className="font-heading font-bold text-lg mb-6 text-neutral dark:text-cream">{t('footer.links_title')}</h4>
+                        <h4 className="font-heading font-bold text-lg mb-6 text-neutral dark:text-brand-pink">{t('footer.links_title')}</h4>
                         <ul className="space-y-3">
-                            <li><a href="#about" className="text-neutral/70 dark:text-cream/70 hover:text-primary transition-colors">{t('nav.about')}</a></li>
-                            <li><a href="#services" className="text-neutral/70 dark:text-cream/70 hover:text-primary transition-colors">{t('nav.services')}</a></li>
-                            <li><a href="#contact" className="text-neutral/70 dark:text-cream/70 hover:text-primary transition-colors">{t('nav.contact')}</a></li>
+                            <li><a href="#about" className="text-neutral/70 dark:text-brand-pink/70 hover:text-primary transition-colors">{t('nav.about')}</a></li>
+                            <li><a href="#services" className="text-neutral/70 dark:text-brand-pink/70 hover:text-primary transition-colors">{t('nav.services')}</a></li>
+                            <li><a href="#contact" className="text-neutral/70 dark:text-brand-pink/70 hover:text-primary transition-colors">{t('nav.contact')}</a></li>
                         </ul>
                     </div>
 
                     {/* Contact */}
                     <div>
-                        <h4 className="font-heading font-bold text-lg mb-6 text-neutral dark:text-cream">{t('footer.contact_title')}</h4>
+                        <h4 className="font-heading font-bold text-lg mb-6 text-neutral dark:text-brand-pink">{t('footer.contact_title')}</h4>
                         <div className="grid grid-cols-2 gap-x-6 gap-y-6">
-                            <div className="text-neutral/70 dark:text-cream/70">
-                                <div className="font-semibold text-neutral dark:text-cream mb-1">{t('footer.address_label')}</div>
+                            <div className="text-neutral/70 dark:text-brand-pink/70">
+                                <div className="font-semibold text-neutral dark:text-brand-pink mb-1">{t('footer.address_label')}</div>
                                 <span className="text-sm">Toshkent sh., Yunusobod t.,<br />Amir Temur prospekti, 127-uy</span>
                             </div>
-                            <div className="text-neutral/70 dark:text-cream/70">
-                                <div className="font-semibold text-neutral dark:text-cream mb-1">{t('footer.phone_label')}</div>
+                            <div className="text-neutral/70 dark:text-brand-pink/70">
+                                <div className="font-semibold text-neutral dark:text-brand-pink mb-1">{t('footer.phone_label')}</div>
                                 <div className="flex flex-col text-sm">
                                     <span>+998 77 318-30-70</span>
                                     <span>+998 93 515-30-76</span>
                                 </div>
                             </div>
-                            <div className="text-neutral/70 dark:text-cream/70">
-                                <div className="font-semibold text-neutral dark:text-cream mb-1">{t('footer.instagram_label')}</div>
+                            <div className="text-neutral/70 dark:text-brand-pink/70">
+                                <div className="font-semibold text-neutral dark:text-brand-pink mb-1">{t('footer.instagram_label')}</div>
                                 <a href="https://www.instagram.com/_stupenki_kids_/" target="_blank" rel="noopener noreferrer" className="hover:text-primary text-sm">@_stupenki_kids_</a>
                             </div>
-                            <div className="text-neutral/70 dark:text-cream/70">
-                                <div className="font-semibold text-neutral dark:text-cream mb-1">{t('footer.facebook_label')}</div>
+                            <div className="text-neutral/70 dark:text-brand-pink/70">
+                                <div className="font-semibold text-neutral dark:text-brand-pink mb-1">{t('footer.facebook_label')}</div>
                                 <a href="https://www.facebook.com/groups/stupenki.kids" target="_blank" rel="noopener noreferrer" className="hover:text-primary text-sm">Facebook guruh</a>
                             </div>
                         </div>
@@ -68,8 +68,8 @@ export function Footer() {
                 {/* Full Width Map Section with Creative Styling */}
                 <div className="mb-12">
                     <div className="text-center mb-6">
-                        <h3 className="text-3xl font-heading font-bold text-neutral dark:text-cream mb-2">{t('footer.map_title')}</h3>
-                        <p className="text-neutral/60 dark:text-cream/60">Amir Temur prospekti 127, Yunusobod, Toshkent</p>
+                        <h3 className="text-3xl font-heading font-bold text-neutral dark:text-brand-pink mb-2">{t('footer.map_title')}</h3>
+                        <p className="text-neutral/60 dark:text-brand-pink/60">Amir Temur prospekti 127, Yunusobod, Toshkent</p>
                     </div>
 
                     {/* Map Container with Gradient Accent */}
@@ -99,7 +99,7 @@ export function Footer() {
                 </div>
 
                 {/* Copyright */}
-                <div className="border-t border-neutral/10 dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-neutral/50 dark:text-cream/50 text-sm">
+                <div className="border-t border-neutral/10 dark:border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-neutral/50 dark:text-brand-pink/50 text-sm">
                     <p>{t('footer.copyright', { year: new Date().getFullYear() })}</p>
                 </div>
             </div>

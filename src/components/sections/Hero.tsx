@@ -7,7 +7,7 @@ export function Hero() {
     const { t } = useTranslation();
 
     return (
-        <section className="relative overflow-hidden bg-background dark:bg-neutral-900 pt-10 pb-0 lg:pt-20 lg:pb-0">
+        <section className="relative overflow-hidden bg-background dark:bg-brand-dark pt-10 pb-0 lg:pt-20 lg:pb-0">
             {/* Background decoration */}
             <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-secondary/20 dark:bg-secondary/5 rounded-bl-[100px] hidden lg:block" />
 
@@ -20,7 +20,7 @@ export function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, ease: "easeOut" }}
-                            className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-neutral dark:text-cream leading-tight"
+                            className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-neutral dark:text-brand-pink leading-tight"
                         >
                             <span className="text-primary">{t('hero.title_highlight')}</span> <br /> {t('hero.title_main')}
                         </motion.h1>
@@ -29,7 +29,7 @@ export function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-                            className="text-lg md:text-xl text-neutral/70 dark:text-cream/80 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+                            className="text-lg md:text-xl text-neutral/70 dark:text-brand-pink/80 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
                         >
                             {t('hero.description')}
                         </motion.p>
@@ -52,7 +52,7 @@ export function Hero() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.8, delay: 0.6 }}
-                            className="pt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-8 text-neutral/60 dark:text-cream/70 text-sm sm:text-base"
+                            className="pt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-8 text-neutral/60 dark:text-brand-pink/70 text-sm sm:text-base"
                         >
                             <div>
                                 <span className="font-medium">{t('hero.badges.specialists')}</span>
@@ -71,7 +71,7 @@ export function Hero() {
                         className="flex-[2] relative w-full flex justify-center lg:justify-start"
                     >
                         <div className="relative w-full" style={{ transform: 'scale(1.8)', transformOrigin: 'center' }}>
-                            <AnimatedHero className="w-full h-auto text-neutral dark:text-cream" />
+                            <AnimatedHero className="w-full h-auto text-neutral dark:text-brand-pink" />
                         </div>
                     </motion.div>
                 </div>

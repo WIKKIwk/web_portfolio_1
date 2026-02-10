@@ -14,6 +14,8 @@ export default {
                 secondary: "#F2C4BE",
                 background: "#FFF5F2",
                 'brand-bg': "#FFF5F2",
+                'brand-dark': "#423E4C",
+                'brand-pink': "#F3ADA7",
                 cream: "#f7f5bc",
                 neutral: {
                     ...colors.neutral,

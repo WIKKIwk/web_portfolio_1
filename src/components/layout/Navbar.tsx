@@ -10,7 +10,7 @@ export function Navbar() {
     const { t } = useTranslation();
 
     return (
-        <nav className="sticky top-0 z-50 w-full bg-background/80 dark:bg-neutral-900/90 backdrop-blur-md border-b border-neutral/5 dark:border-white/10">
+        <nav className="sticky top-0 z-50 w-full bg-background/80 dark:bg-brand-dark/90 backdrop-blur-md border-b border-neutral/5 dark:border-white/10">
             <div className="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
 
                 {/* Logo */}
@@ -18,16 +18,16 @@ export function Navbar() {
                     <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">
                         SK
                     </div>
-                    <span className="text-xl font-heading font-bold text-neutral dark:text-cream">
+                    <span className="text-xl font-heading font-bold text-neutral dark:text-brand-pink">
                         Stupenki Kids
                     </span>
                 </a>
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center gap-8">
-                    <a href="#about" className="text-neutral dark:text-cream hover:text-primary font-medium transition-colors">{t('nav.about')}</a>
-                    <a href="#services" className="text-neutral dark:text-cream hover:text-primary font-medium transition-colors">{t('nav.services')}</a>
-                    <a href="#contact" className="text-neutral dark:text-cream hover:text-primary font-medium transition-colors">{t('nav.contact')}</a>
+                    <a href="#about" className="text-neutral dark:text-brand-pink hover:text-primary font-medium transition-colors">{t('nav.about')}</a>
+                    <a href="#services" className="text-neutral dark:text-brand-pink hover:text-primary font-medium transition-colors">{t('nav.services')}</a>
+                    <a href="#contact" className="text-neutral dark:text-brand-pink hover:text-primary font-medium transition-colors">{t('nav.contact')}</a>
                 </div>
 
                 {/* Actions */}
@@ -41,7 +41,7 @@ export function Navbar() {
 
                 {/* Mobile Toggle */}
                 <button
-                    className="md:hidden p-2 text-neutral dark:text-cream"
+                    className="md:hidden p-2 text-neutral dark:text-brand-pink"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {isOpen ? <X /> : <Menu />}
@@ -50,10 +50,10 @@ export function Navbar() {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden absolute top-20 left-0 w-full bg-background dark:bg-neutral-900 border-b border-neutral/5 dark:border-white/10 p-4 flex flex-col gap-4 shadow-lg animate-in slide-in-from-top-5">
-                    <a href="#about" className="text-lg font-medium py-2 border-b border-neutral/5 dark:border-white/10 dark:text-cream" onClick={() => setIsOpen(false)}>{t('nav.about')}</a>
-                    <a href="#services" className="text-lg font-medium py-2 border-b border-neutral/5 dark:border-white/10 dark:text-cream" onClick={() => setIsOpen(false)}>{t('nav.services')}</a>
-                    <a href="#contact" className="text-lg font-medium py-2 border-b border-neutral/5 dark:border-white/10 dark:text-cream" onClick={() => setIsOpen(false)}>{t('nav.contact')}</a>
+                <div className="md:hidden absolute top-20 left-0 w-full bg-background dark:bg-brand-dark border-b border-neutral/5 dark:border-white/10 p-4 flex flex-col gap-4 shadow-lg animate-in slide-in-from-top-5">
+                    <a href="#about" className="text-lg font-medium py-2 border-b border-neutral/5 dark:border-white/10 dark:text-brand-pink" onClick={() => setIsOpen(false)}>{t('nav.about')}</a>
+                    <a href="#services" className="text-lg font-medium py-2 border-b border-neutral/5 dark:border-white/10 dark:text-brand-pink" onClick={() => setIsOpen(false)}>{t('nav.services')}</a>
+                    <a href="#contact" className="text-lg font-medium py-2 border-b border-neutral/5 dark:border-white/10 dark:text-brand-pink" onClick={() => setIsOpen(false)}>{t('nav.contact')}</a>
                     <div className="flex flex-col gap-4 mt-2">
                         <div className="flex justify-between items-center">
                             <ThemeToggle />

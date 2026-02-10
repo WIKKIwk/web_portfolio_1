@@ -103,7 +103,7 @@ function IntroRow({ item, animationKey }: { item: MissionItem; animationKey: num
                 <h2 className="text-3xl md:text-5xl font-heading font-bold text-primary">
                     {item.title}
                 </h2>
-                <div className="text-lg text-neutral/70 dark:text-cream/80 leading-relaxed whitespace-pre-line">
+                <div className="text-lg text-neutral/70 dark:text-brand-pink/80 leading-relaxed whitespace-pre-line">
                     {item.text}
                 </div>
             </div>
@@ -152,7 +152,7 @@ function MissionRow({ item, animationKey }: { item: MissionItem; animationKey: n
                 <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary">
                     {item.title}
                 </h2>
-                <p className="text-lg text-neutral/70 dark:text-cream/80 leading-relaxed">
+                <p className="text-lg text-neutral/70 dark:text-brand-pink/80 leading-relaxed">
                     {item.text}
                 </p>
             </motion.div>
@@ -183,7 +183,7 @@ export function Mission() {
     return (
         <>
             {/* About Section - Intro Only */}
-            <section id="about" className="-mt-32 pt-0 pb-12 bg-background dark:bg-neutral-900 overflow-hidden scroll-mt-20">
+            <section id="about" className="-mt-32 pt-0 pb-12 bg-background dark:bg-brand-dark overflow-hidden scroll-mt-20">
                 <div className="container mx-auto px-4 md:px-6">
                     {missionItems.filter(item => item.isIntro).map((item) => (
                         <IntroRow key={item.id} item={item} animationKey={animationKey} />
@@ -192,7 +192,7 @@ export function Mission() {
             </section>
 
             {/* Services Section - 4 Mission Rows */}
-            <section id="services" className="pt-12 pb-12 bg-background dark:bg-neutral-900 overflow-hidden scroll-mt-20">
+            <section id="services" className="pt-12 pb-12 bg-background dark:bg-brand-dark overflow-hidden scroll-mt-20">
                 <div className="container mx-auto px-4 md:px-6 space-y-12">
                     {missionItems.filter(item => !item.isIntro).map((item) => (
                         <MissionRow key={item.id} item={item} animationKey={animationKey} />
