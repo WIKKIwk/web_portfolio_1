@@ -96,9 +96,9 @@ export function Footer() {
                                 href="https://yandex.uz/maps/?text=Amir+Temur+prospekti+127+Toshkent"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="absolute top-4 left-4 bg-white dark:bg-brand-dark text-neutral dark:text-brand-pink px-4 py-2 rounded-full shadow-lg font-bold text-sm hover:scale-105 transition-transform z-10 flex items-center gap-2 border border-neutral/10 dark:border-brand-pink/20"
+                                className="absolute top-2 left-2 bg-white dark:bg-brand-dark text-neutral dark:text-brand-pink px-5 py-2.5 rounded-full shadow-lg font-bold text-sm hover:scale-105 transition-transform z-10 flex items-center gap-2 border border-neutral/10 dark:border-brand-pink/20"
                             >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11" /></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11" /></svg>
                                 Yandex Xarita
                             </a>
                         </div>
@@ -114,7 +114,7 @@ export function Footer() {
                     <p>{t('footer.copyright', { year: new Date().getFullYear() })}</p>
                 </div>
             </div>
-        </footer>
+        </footer >
     );
 }
 
