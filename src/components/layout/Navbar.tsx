@@ -26,6 +26,7 @@ export function Navbar() {
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center gap-8">
                     <a href="#about" className="text-neutral dark:text-brand-pink hover:text-primary font-medium transition-colors">{t('nav.about')}</a>
+                    <a href="#services" className="text-neutral dark:text-brand-pink hover:text-primary font-medium transition-colors">{t('nav.services')}</a>
                     <a href="#contact" className="text-neutral dark:text-brand-pink hover:text-primary font-medium transition-colors">{t('nav.contact')}</a>
                 </div>
 
@@ -33,9 +34,6 @@ export function Navbar() {
                 <div className="hidden md:flex items-center gap-4">
                     <LanguageSwitcher />
                     <ThemeToggle />
-                    <Button variant="outline" size="sm" asChild>
-                        <a href="#services">{t('nav.services')}</a>
-                    </Button>
                     <Button variant="primary" size="sm" asChild>
                         <a href="#contact">{t('nav.book')}</a>
                     </Button>
