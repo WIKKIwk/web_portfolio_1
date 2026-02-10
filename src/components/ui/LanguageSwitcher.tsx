@@ -19,7 +19,7 @@ export function LanguageSwitcher() {
                 variant={getVariant('uz')}
                 size="sm"
                 onClick={() => changeLanguage('uz')}
-                className="px-2 min-w-[unset] h-8 text-xs font-semibold"
+                className="px-2 min-w-[unset] h-8 text-xs font-semibold transition-all duration-300 hover:scale-110 hover:shadow-sm"
             >
                 UZ
             </Button>
@@ -27,7 +27,7 @@ export function LanguageSwitcher() {
                 variant={getVariant('ru')}
                 size="sm"
                 onClick={() => changeLanguage('ru')}
-                className="px-2 min-w-[unset] h-8 text-xs font-semibold"
+                className="px-2 min-w-[unset] h-8 text-xs font-semibold transition-all duration-300 hover:scale-110 hover:shadow-sm"
             >
                 RU
             </Button>
@@ -35,7 +35,7 @@ export function LanguageSwitcher() {
                 variant={getVariant('en')}
                 size="sm"
                 onClick={() => changeLanguage('en')}
-                className="px-2 min-w-[unset] h-8 text-xs font-semibold"
+                className="px-2 min-w-[unset] h-8 text-xs font-semibold transition-all duration-300 hover:scale-110 hover:shadow-sm"
             >
                 EN
             </Button>
