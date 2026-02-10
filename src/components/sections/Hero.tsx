@@ -43,8 +43,10 @@ export function Hero() {
                             <Button size="lg">
                                 {t('hero.buttons.book')}
                             </Button>
-                            <Button variant="outline" size="lg">
-                                {t('hero.buttons.services')}
+                            <Button variant="outline" size="lg" asChild>
+                                <a href="#services">
+                                    {t('hero.buttons.services')}
+                                </a>
                             </Button>
                         </motion.div>
 
