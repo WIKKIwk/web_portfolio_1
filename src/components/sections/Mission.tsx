@@ -170,7 +170,7 @@ function MissionRow({ item, animationKey }: { item: MissionItem; animationKey: n
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true, amount: 0.8 }}
             >
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-primary">
+                <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-heading font-bold text-primary">
                     {item.title}
                 </h2>
                 <p className="text-sm sm:text-base md:text-lg text-neutral/70 dark:text-brand-pink/80 leading-relaxed">

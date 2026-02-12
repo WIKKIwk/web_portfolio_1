@@ -19,11 +19,11 @@ export function Footer() {
                             <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold">
                                 SK
                             </div>
-                            <span className="text-xl font-heading font-bold text-neutral dark:text-brand-pink">
+                            <span className="text-lg md:text-xl font-heading font-bold text-neutral dark:text-brand-pink">
                                 Stupenki Kids
                             </span>
                         </div>
-                        <p className="text-neutral/70 dark:text-brand-pink/70 leading-relaxed">
+                        <p className="text-sm md:text-base text-neutral/70 dark:text-brand-pink/70 leading-relaxed">
                             {t('hero.description')}
                         </p>
                     </div>
