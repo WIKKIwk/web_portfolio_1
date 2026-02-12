@@ -78,11 +78,11 @@ export function Footer() {
                         <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-3xl blur-2xl -z-10 transform scale-105"></div>
 
                         {/* Map Frame */}
-                        <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-primary/20 dark:border-primary/30">
+                        <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-primary/20 dark:border-primary/30 h-64 md:h-[450px]">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.2937907970583!2d69.28!3d41.33!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDE5JzQ4LjAiTiA2OcKwMTYnNDguMCJF!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s"
                                 width="100%"
-                                height="450"
+                                height="100%"
                                 style={{ border: 0 }}
                                 allowFullScreen
                                 loading="lazy"
