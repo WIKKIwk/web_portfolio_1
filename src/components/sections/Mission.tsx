@@ -17,17 +17,17 @@ const missionItems: MissionItem[] = [
         title: "Stupenki Kids — Mehr va Bilim Uyg'unligi",
         text: `"Stupenki Kids" bolalar neyroreabilitatsiya markazi — bu shunchaki tibbiy muassasa emas, balki har bir bolajon o'zining yangi imkoniyatlarini kashf etadigan maskandir. Biz bolalar neyrologiyasi va ortopediyasi sohasida xalqaro tajribani O'zbekistonga olib kirdik.
 
-**Nima uchun ota-onalar aynan bizni tanlashadi?**
+Nima uchun ota-onalar aynan bizni tanlashadi?
 
-**Xalqaro darajadagi mutaxassislar:** Bizning shifokorlarimiz tibbiy ma'lumotga ega bo'lib, o'z malakalarini xorijiy davlatlarda oshirgan haqiqiy professionallardir.
+Xalqaro darajadagi mutaxassislar: Bizning shifokorlarimiz tibbiy ma'lumotga ega bo'lib, o'z malakalarini xorijiy davlatlarda oshirgan haqiqiy professionallardir.
 
-**Yuqori ishonch va e'tirof:** 2GIS va Yandex Maps platformalarida ota-onalar bizni 4.9/5 ball bilan baholashgan. Foydalanuvchilar markazimizning tozaligi, xodimlarning xushmuomalaligi va, eng muhimi, davolash natijalaridan mamnun ekanliklarini alohida ta'kidlashadi.
+Yuqori ishonch va e'tirof: 2GIS va Yandex Maps platformalarida ota-onalar bizni 4.9/5 ball bilan baholashgan. Foydalanuvchilar markazimizning tozaligi, xodimlarning xushmuomalaligi va, eng muhimi, davolash natijalaridan mamnun ekanliklarini alohida ta'kidlashadi.
 
-**Aniq va tezkor natijalar:** Biz vaqtning qadrini bilamiz. Masalan, qomatni tiklash (osanka) yoki nutq rivojlanishi kabi yo'nalishlarda bor-yo'g'i 20 ta mashg'ulotdan so'ng sezilarli ijobiy o'zgarishlarni ko'rishingiz mumkin.
+Aniq va tezkor natijalar: Biz vaqtning qadrini bilamiz. Masalan, qomatni tiklash (osanka) yoki nutq rivojlanishi kabi yo'nalishlarda bor-yo'g'i 20 ta mashg'ulotdan so'ng sezilarli ijobiy o'zgarishlarni ko'rishingiz mumkin.
 
-**Shinam va xavfsiz muhit:** Markazimiz har bir kichik mehmonimiz o'zini uydagidek erkin his qilishi uchun shinam, ozoda va zamonaviy jihozlangan.
+Shinam va xavfsiz muhit: Markazimiz har bir kichik mehmonimiz o'zini uydagidek erkin his qilishi uchun shinam, ozoda va zamonaviy jihozlangan.
 
-**Bizning qadriyatlarimiz**
+Bizning qadriyatlarimiz
 
 Biz reabilitatsiyaga nafaqat jismoniy mashqlar, balki bolaning ruhiy xotirjamligi va rivojlanishidagi har bir kichik "zina" (stupenka) sifatida qaraymiz. Biz bilan har bir qadam ishonchli, har bir natija esa quvonchlidir!`,
         imageSrc: `${import.meta.env.BASE_URL}mission_intro.svg`,
@@ -100,11 +100,32 @@ function IntroRow({ item, animationKey }: { item: MissionItem; animationKey: num
 
             {/* Full-width prose text */}
             <div className="-mt-40 w-full max-w-6xl space-y-6">
-                <h2 className="text-3xl md:text-5xl font-heading font-bold text-primary">
+                <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-primary">
                     {item.title}
                 </h2>
-                <div className="text-lg text-neutral/70 dark:text-brand-pink/80 leading-relaxed whitespace-pre-line">
-                    {item.text}
+                <div className="text-base md:text-lg text-neutral/70 dark:text-brand-pink/80 leading-relaxed whitespace-pre-line">
+                    {item.text.split('\n').map((line, i) => {
+                        // Bold specific headers/keys
+                        const boldPrefixes = [
+                            "Nima uchun ota-onalar aynan bizni tanlashadi?",
+                            "Xalqaro darajadagi mutaxassislar:",
+                            "Yuqori ishonch va e'tirof:",
+                            "Aniq va tezkor natijalar:",
+                            "Shinam va xavfsiz muhit:",
+                            "Bizning qadriyatlarimiz"
+                        ];
+                        const startsWithBold = boldPrefixes.find(prefix => line.startsWith(prefix));
+
+                        if (startsWithBold) {
+                            const rest = line.substring(startsWithBold.length);
+                            return (
+                                <span key={i} className="block mb-2">
+                                    <strong className="text-neutral dark:text-brand-pink font-bold">{startsWithBold}</strong>{rest}
+                                </span>
+                            );
+                        }
+                        return <span key={i} className="block mb-2">{line}</span>;
+                    })}
                 </div>
             </div>
         </motion.div>
@@ -149,10 +170,10 @@ function MissionRow({ item, animationKey }: { item: MissionItem; animationKey: n
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true, amount: 0.8 }}
             >
-                <h2 className="text-3xl md:text-4xl font-heading font-bold text-primary">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-primary">
                     {item.title}
                 </h2>
-                <p className="text-lg text-neutral/70 dark:text-brand-pink/80 leading-relaxed">
+                <p className="text-base md:text-lg text-neutral/70 dark:text-brand-pink/80 leading-relaxed">
                     {item.text}
                 </p>
             </motion.div>
