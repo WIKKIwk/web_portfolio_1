@@ -164,16 +164,16 @@ function MissionRow({ item, animationKey }: { item: MissionItem; animationKey: n
 
             {/* Text Section */}
             <motion.div
-                className="flex-1 space-y-6"
+                className="flex-1 space-y-4 md:space-y-6"
                 initial={{ opacity: 0, x: item.reverse ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true, amount: 0.8 }}
             >
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-primary">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-primary">
                     {item.title}
                 </h2>
-                <p className="text-base md:text-lg text-neutral/70 dark:text-brand-pink/80 leading-relaxed">
+                <p className="text-sm sm:text-base md:text-lg text-neutral/70 dark:text-brand-pink/80 leading-relaxed">
                     {item.text}
                 </p>
             </motion.div>

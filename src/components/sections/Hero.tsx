@@ -20,7 +20,7 @@ export function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, ease: "easeOut" }}
-                            className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-neutral dark:text-brand-pink leading-tight"
+                            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-neutral dark:text-brand-pink leading-tight"
                         >
                             <span className="text-primary">{t('hero.title_highlight')}</span> <br /> {t('hero.title_main')}
                         </motion.h1>
@@ -29,7 +29,7 @@ export function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-                            className="text-base md:text-xl text-neutral/70 dark:text-brand-pink/80 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+                            className="text-sm sm:text-base md:text-xl text-neutral/70 dark:text-brand-pink/80 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
                         >
                             {t('hero.description')}
                         </motion.p>
