@@ -12,10 +12,10 @@ export function Hero() {
             <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-secondary/20 dark:bg-secondary/5 rounded-bl-[100px] hidden lg:block" />
 
             <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-                <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                <div className="flex flex-col-reverse lg:flex-row items-center gap-0 lg:gap-12">
 
                     {/* Content */}
-                    <div className="w-full lg:w-auto lg:max-w-xl space-y-8 text-center lg:text-left">
+                    <div className="w-full lg:w-auto lg:max-w-xl space-y-4 lg:space-y-8 text-center lg:text-left -mt-20 lg:mt-0 relative z-10">
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ export function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-                            className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+                            className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2 lg:pt-0"
                         >
                             <Button size="lg">
                                 {t('hero.buttons.book')}
@@ -54,7 +54,7 @@ export function Hero() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.8, delay: 0.6 }}
-                            className="pt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-8 text-neutral/60 dark:text-brand-pink/70 text-sm sm:text-base"
+                            className="pt-4 lg:pt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-8 text-neutral/60 dark:text-brand-pink/70 text-sm sm:text-base"
                         >
                             <div>
                                 <span className="font-medium">{t('hero.badges.specialists')}</span>
@@ -65,14 +65,14 @@ export function Hero() {
                         </motion.div>
                     </div>
 
-                    {/* Illustration */}
+                    {/* Illustration - Now on Top on Mobile */}
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.95, x: 20 }}
-                        animate={{ opacity: 1, scale: 1, x: 0 }}
+                        initial={{ opacity: 0, scale: 0.95, y: -20 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-                        className="flex-[2] relative w-full flex justify-center lg:justify-start"
+                        className="flex-[2] relative w-full flex justify-center lg:justify-start mb-0 lg:mb-0"
                     >
-                        <div className="relative w-full" style={{ transform: 'scale(1.8)', transformOrigin: 'center' }}>
+                        <div className="relative w-full" style={{ transform: 'scale(1.2) translateY(-10%)', transformOrigin: 'center' }}>
                             <AnimatedHero className="w-full h-auto text-neutral dark:text-brand-pink" />
                         </div>
                     </motion.div>
