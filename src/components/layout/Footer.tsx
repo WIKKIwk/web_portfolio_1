@@ -30,11 +30,11 @@ export function Footer() {
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className="font-heading font-bold text-lg mb-6 text-neutral dark:text-brand-pink">{t('footer.links_title')}</h4>
-                        <ul className="space-y-3">
-                            <li><a href="#about" className="text-neutral/70 dark:text-brand-pink/70 hover:text-primary transition-colors">{t('nav.about')}</a></li>
-                            <li><a href="#services" className="text-neutral/70 dark:text-brand-pink/70 hover:text-primary transition-colors">{t('nav.services')}</a></li>
-                            <li><a href="#contact" className="text-neutral/70 dark:text-brand-pink/70 hover:text-primary transition-colors">{t('nav.contact')}</a></li>
+                        <h4 className="font-heading font-bold text-base md:text-lg mb-4 md:mb-6 text-neutral dark:text-brand-pink">{t('footer.links_title')}</h4>
+                        <ul className="space-y-2 md:space-y-3">
+                            <li><a href="#about" className="text-sm md:text-base text-neutral/70 dark:text-brand-pink/70 hover:text-primary transition-colors">{t('nav.about')}</a></li>
+                            <li><a href="#services" className="text-sm md:text-base text-neutral/70 dark:text-brand-pink/70 hover:text-primary transition-colors">{t('nav.services')}</a></li>
+                            <li><a href="#contact" className="text-sm md:text-base text-neutral/70 dark:text-brand-pink/70 hover:text-primary transition-colors">{t('nav.contact')}</a></li>
                         </ul>
                     </div>
 
