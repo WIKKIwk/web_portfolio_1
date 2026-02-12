@@ -41,25 +41,25 @@ export function Footer() {
                     {/* Contact */}
                     <div>
                         <h4 className="font-heading font-bold text-lg mb-6 text-neutral dark:text-brand-pink">{t('footer.contact_title')}</h4>
-                        <div className="grid grid-cols-2 gap-x-6 gap-y-6">
+                        <div className="grid grid-cols-2 gap-x-4 md:gap-x-6 gap-y-4 md:gap-y-6">
                             <div className="text-neutral/70 dark:text-brand-pink/70">
-                                <div className="font-semibold text-neutral dark:text-brand-pink mb-1">{t('footer.address_label')}</div>
-                                <span className="text-sm">Toshkent sh., Yunusobod t.,<br />Amir Temur prospekti, 127-uy</span>
+                                <div className="font-semibold text-sm md:text-base text-neutral dark:text-brand-pink mb-1">{t('footer.address_label')}</div>
+                                <span className="text-xs md:text-sm">Toshkent sh., Yunusobod t.,<br />Amir Temur prospekti, 127-uy</span>
                             </div>
                             <div className="text-neutral/70 dark:text-brand-pink/70">
-                                <div className="font-semibold text-neutral dark:text-brand-pink mb-1">{t('footer.phone_label')}</div>
-                                <div className="flex flex-col text-sm">
+                                <div className="font-semibold text-sm md:text-base text-neutral dark:text-brand-pink mb-1">{t('footer.phone_label')}</div>
+                                <div className="flex flex-col text-xs md:text-sm">
                                     <span>+998 77 318-30-70</span>
                                     <span>+998 93 515-30-76</span>
                                 </div>
                             </div>
                             <div className="text-neutral/70 dark:text-brand-pink/70">
-                                <div className="font-semibold text-neutral dark:text-brand-pink mb-1">{t('footer.instagram_label')}</div>
-                                <a href="https://www.instagram.com/_stupenki_kids_/" target="_blank" rel="noopener noreferrer" className="hover:text-primary text-sm">@_stupenki_kids_</a>
+                                <div className="font-semibold text-sm md:text-base text-neutral dark:text-brand-pink mb-1">{t('footer.instagram_label')}</div>
+                                <a href="https://www.instagram.com/_stupenki_kids_/" target="_blank" rel="noopener noreferrer" className="hover:text-primary text-xs md:text-sm">@_stupenki_kids_</a>
                             </div>
                             <div className="text-neutral/70 dark:text-brand-pink/70">
-                                <div className="font-semibold text-neutral dark:text-brand-pink mb-1">{t('footer.facebook_label')}</div>
-                                <a href="https://www.facebook.com/groups/stupenki.kids" target="_blank" rel="noopener noreferrer" className="hover:text-primary text-sm">Facebook guruh</a>
+                                <div className="font-semibold text-sm md:text-base text-neutral dark:text-brand-pink mb-1">{t('footer.facebook_label')}</div>
+                                <a href="https://www.facebook.com/groups/stupenki.kids" target="_blank" rel="noopener noreferrer" className="hover:text-primary text-xs md:text-sm">Facebook guruh</a>
                             </div>
                         </div>
                     </div>
