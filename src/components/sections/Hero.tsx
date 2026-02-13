@@ -36,7 +36,7 @@ export function Hero() {
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
                         >
-                            <div className="relative w-full" style={{ transform: 'scale(1.2)', transformOrigin: 'center' }}>
+                            <div className="relative w-full" style={{ transform: 'scale(1.5) translateY(5%)', transformOrigin: 'center' }}>
                                 <AnimatedHero className="w-full h-auto text-neutral dark:text-brand-pink" />
                             </div>
                         </motion.div>
