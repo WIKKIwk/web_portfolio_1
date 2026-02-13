@@ -170,7 +170,7 @@ function MissionRow({ item, animationKey }: { item: MissionItem; animationKey: n
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true, amount: 0.8 }}
             >
-                <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-heading font-bold text-primary">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-primary">
                     {item.title}
                 </h2>
                 <p className="text-sm sm:text-base md:text-lg text-neutral/70 dark:text-brand-pink/80 leading-relaxed">
@@ -204,7 +204,7 @@ export function Mission() {
     return (
         <>
             {/* About Section - Intro Only */}
-            <section id="about" className="-mt-32 lg:-mt-52 pt-0 pb-12 bg-background dark:bg-brand-dark overflow-hidden scroll-mt-20">
+            <section id="about" className="-mt-32 pt-0 pb-12 bg-background dark:bg-brand-dark overflow-hidden scroll-mt-20">
                 <div className="container mx-auto px-4 md:px-6">
                     {missionItems.filter(item => item.isIntro).map((item) => (
                         <IntroRow key={item.id} item={item} animationKey={animationKey} />
