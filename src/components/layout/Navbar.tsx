@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '../ui/Button';
 import { ThemeToggle } from '../ui/ThemeToggle';
