@@ -41,11 +41,11 @@ export function Navbar() {
 
                 {/* Mobile Toggle */}
                 <button
-                    className="md:hidden p-2 text-neutral dark:text-brand-pink hover:bg-neutral/5 dark:hover:bg-white/5 rounded-full transition-colors"
+                    className="md:hidden p-2 text-primary hover:text-primary/80 transition-colors"
                     onClick={() => setIsOpen(!isOpen)}
                     aria-label="Toggle menu"
                 >
-                    {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                    {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
                 </button>
             </div>
 
