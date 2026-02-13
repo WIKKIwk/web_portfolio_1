@@ -36,7 +36,7 @@ export function Hero() {
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
                         >
-                            <div className="relative w-full origin-center transform scale-[1.5] -translate-y-4 lg:scale-[2] lg:-translate-y-24">
+                            <div className="relative w-full origin-center transform scale-[1.5] -translate-y-4 lg:scale-[1.5] lg:-translate-y-16">
                                 <AnimatedHero className="w-full h-auto text-neutral dark:text-brand-pink" />
                             </div>
                         </motion.div>
