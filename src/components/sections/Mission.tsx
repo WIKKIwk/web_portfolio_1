@@ -181,7 +181,7 @@ function MissionRow({ item, animationKey }: { item: MissionItem; animationKey: n
     );
 }
 
-export function Mission() {
+export default function Mission() {
     const [animationKey, setAnimationKey] = useState(0);
 
     useEffect(() => {

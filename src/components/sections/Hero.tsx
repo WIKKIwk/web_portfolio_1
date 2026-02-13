@@ -3,7 +3,7 @@ import { AnimatedHero } from '../icons/AnimatedHero';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
-export function Hero() {
+export default function Hero() {
     const { t } = useTranslation();
 
     return (
