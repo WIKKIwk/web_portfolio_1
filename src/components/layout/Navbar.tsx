@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Button } from '../ui/Button';
 import { ThemeToggle } from '../ui/ThemeToggle';
 import { LanguageSwitcher } from '../ui/LanguageSwitcher';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -62,22 +62,68 @@ export function Navbar() {
             </div>
 
             {/* Mobile Menu */}
-            {isOpen && (
-                <div className="md:hidden absolute top-20 left-0 w-full bg-background dark:bg-brand-dark border-b border-neutral/5 dark:border-white/10 p-4 flex flex-col gap-4 shadow-lg animate-in slide-in-from-top-5">
-                    <a href="#about" className="text-lg font-medium py-2 border-b border-neutral/5 dark:border-white/10 dark:text-brand-pink" onClick={() => setIsOpen(false)}>{t('nav.about')}</a>
-                    <a href="#services" className="text-lg font-medium py-2 border-b border-neutral/5 dark:border-white/10 dark:text-brand-pink" onClick={() => setIsOpen(false)}>{t('nav.services')}</a>
-                    <a href="#contact" className="text-lg font-medium py-2 border-b border-neutral/5 dark:border-white/10 dark:text-brand-pink" onClick={() => setIsOpen(false)}>{t('nav.contact')}</a>
-                    <div className="flex flex-col gap-4 mt-2">
-                        <div className="flex justify-between items-center">
-                            <ThemeToggle />
-                            <LanguageSwitcher />
-                        </div>
-                        <Button className="w-full" asChild>
-                            <a href="#contact" onClick={() => setIsOpen(false)}>{t('nav.book')}</a>
-                        </Button>
-                    </div>
-                </div>
-            )}
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="md:hidden absolute top-20 left-0 w-full bg-background dark:bg-brand-dark border-b border-neutral/5 dark:border-white/10 overflow-hidden shadow-lg"
+                    >
+                        <motion.div
+                            className="p-4 flex flex-col gap-4"
+                            initial="hidden"
+                            animate="show"
+                            variants={{
+                                hidden: { opacity: 0 },
+                                show: {
+                                    opacity: 1,
+                                    transition: {
+                                        staggerChildren: 0.1,
+                                        delayChildren: 0.1
+                                    }
+                                }
+                            }}
+                        >
+                            {[
+                                { href: "#about", label: t('nav.about') },
+                                { href: "#services", label: t('nav.services') },
+                                { href: "#contact", label: t('nav.contact') }
+                            ].map((item, idx) => (
+                                <motion.a
+                                    key={idx}
+                                    href={item.href}
+                                    className="text-lg font-medium py-2 border-b border-neutral/5 dark:border-white/10 dark:text-brand-pink"
+                                    onClick={() => setIsOpen(false)}
+                                    variants={{
+                                        hidden: { x: 50, opacity: 0 },
+                                        show: { x: 0, opacity: 1, transition: { type: "spring", stiffness: 300, damping: 24 } }
+                                    }}
+                                >
+                                    {item.label}
+                                </motion.a>
+                            ))}
+
+                            <motion.div
+                                className="flex flex-col gap-4 mt-2"
+                                variants={{
+                                    hidden: { x: 50, opacity: 0 },
+                                    show: { x: 0, opacity: 1, transition: { type: "spring", stiffness: 300, damping: 24 } }
+                                }}
+                            >
+                                <div className="flex justify-between items-center">
+                                    <ThemeToggle />
+                                    <LanguageSwitcher />
+                                </div>
+                                <Button className="w-full" asChild>
+                                    <a href="#contact" onClick={() => setIsOpen(false)}>{t('nav.book')}</a>
+                                </Button>
+                            </motion.div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </nav>
     );
 }
