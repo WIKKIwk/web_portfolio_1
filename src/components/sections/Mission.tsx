@@ -99,7 +99,7 @@ function IntroRow({ item, animationKey }: { item: MissionItem; animationKey: num
             </div>
 
             {/* Full-width prose text */}
-            <div className="-mt-10 md:-mt-20 lg:-mt-40 w-full max-w-6xl space-y-6">
+            <div className="-mt-24 md:-mt-20 lg:-mt-40 w-full max-w-6xl space-y-6">
                 <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-primary">
                     {item.title}
                 </h2>
