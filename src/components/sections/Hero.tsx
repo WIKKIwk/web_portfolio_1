@@ -9,7 +9,8 @@ export default function Hero() {
     return (
         <section className="relative z-10 overflow-hidden bg-background dark:bg-brand-dark pt-10 pb-0 lg:pt-4 lg:pb-0">
             {/* Background decoration */}
-            <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-secondary/20 dark:bg-secondary/5 rounded-bl-[100px] hidden lg:block" />
+            {/* Background decoration - Removed as per user request to fix "separation" look */}
+            <div className="hidden" />
 
             <div className="container mx-auto px-4 md:px-6 max-w-7xl">
                 <div className="container mx-auto px-4 md:px-6 max-w-7xl">
