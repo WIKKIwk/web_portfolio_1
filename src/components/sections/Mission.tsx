@@ -204,7 +204,7 @@ export function Mission() {
     return (
         <>
             {/* About Section - Intro Only */}
-            <section id="about" className="-mt-32 pt-0 pb-12 bg-background dark:bg-brand-dark overflow-hidden scroll-mt-20">
+            <section id="about" className="-mt-32 lg:-mt-52 pt-0 pb-12 bg-background dark:bg-brand-dark overflow-hidden scroll-mt-20">
                 <div className="container mx-auto px-4 md:px-6">
                     {missionItems.filter(item => item.isIntro).map((item) => (
                         <IntroRow key={item.id} item={item} animationKey={animationKey} />
