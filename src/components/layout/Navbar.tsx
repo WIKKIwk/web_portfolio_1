@@ -68,7 +68,7 @@ export function Navbar() {
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="md:hidden absolute top-20 left-0 w-full bg-background dark:bg-brand-dark border-b border-neutral/5 dark:border-white/10 overflow-hidden shadow-lg"
+                        className="md:hidden absolute top-14 left-0 w-full bg-background dark:bg-brand-dark border-b border-neutral/5 dark:border-white/10 overflow-hidden shadow-lg"
                     >
                         <motion.div
                             className="p-4 flex flex-col gap-4"
