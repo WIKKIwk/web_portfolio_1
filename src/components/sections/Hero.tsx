@@ -59,8 +59,10 @@ export default function Hero() {
                                 transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
                                 className="relative z-10 flex flex-row gap-3 justify-center lg:justify-start w-full lg:w-auto"
                             >
-                                <Button className="flex-1 sm:flex-none h-10 sm:h-11 md:h-14 text-xs sm:text-sm md:text-lg px-2 sm:px-8">
-                                    {t('hero.buttons.book')}
+                                <Button className="flex-1 sm:flex-none h-10 sm:h-11 md:h-14 text-xs sm:text-sm md:text-lg px-2 sm:px-8" asChild>
+                                    <a href="#contact">
+                                        {t('hero.buttons.book')}
+                                    </a>
                                 </Button>
                                 <Button variant="outline" asChild className="flex-1 sm:flex-none h-10 sm:h-11 md:h-14 text-xs sm:text-sm md:text-lg px-2 sm:px-8">
                                     <a href="#services">
