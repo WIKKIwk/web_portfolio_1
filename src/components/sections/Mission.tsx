@@ -78,7 +78,7 @@ function IntroRow({ item, animationKey }: { item: MissionItem; animationKey: num
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             onViewportEnter={() => setHasInView(true)}
             style={{ touchAction: 'pan-y' }}
         >
@@ -145,7 +145,7 @@ function MissionRow({ item, animationKey }: { item: MissionItem; animationKey: n
                 initial={{ opacity: 0, x: item.reverse ? 50 : -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                viewport={{ once: false, amount: 0.8 }}
+                viewport={{ once: true, amount: 0.8 }}
                 onViewportEnter={() => setHasInView(true)}
                 style={{ touchAction: 'pan-y' }}
             >
@@ -170,7 +170,7 @@ function MissionRow({ item, animationKey }: { item: MissionItem; animationKey: n
                 initial={{ opacity: 0, x: item.reverse ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: false, amount: 0.8 }}
+                viewport={{ once: true, amount: 0.8 }}
                 style={{ touchAction: 'pan-y' }}
             >
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-primary">
