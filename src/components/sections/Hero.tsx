@@ -28,6 +28,7 @@ export default function Hero({ onOpenServices }: HeroProps) {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, ease: "easeOut" }}
+                            style={{ touchAction: 'pan-y' }}
                         >
                             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-neutral dark:text-brand-pink leading-tight">
                                 <span className="text-primary block lg:inline">{t('hero.title_highlight')}</span> <span className="hidden lg:inline"><br /></span> <span className="text-lg sm:text-2xl lg:text-6xl">{t('hero.title_main')}</span>
@@ -40,6 +41,7 @@ export default function Hero({ onOpenServices }: HeroProps) {
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+                            style={{ touchAction: 'pan-y' }}
                         >
                             <div className="relative w-full origin-center transform scale-[1.5] -translate-y-4 lg:scale-[1.5] lg:-translate-y-16">
                                 <AnimatedHero className="w-full h-auto text-neutral dark:text-brand-pink" />
@@ -53,6 +55,7 @@ export default function Hero({ onOpenServices }: HeroProps) {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
                                 className="text-sm sm:text-base md:text-xl text-neutral/70 dark:text-brand-pink/80 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+                                style={{ touchAction: 'pan-y' }}
                             >
                                 {t('hero.description')}
                             </motion.p>
@@ -62,6 +65,7 @@ export default function Hero({ onOpenServices }: HeroProps) {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
                                 className="relative z-10 flex flex-row gap-3 justify-center lg:justify-start w-full lg:w-auto"
+                                style={{ touchAction: 'pan-y' }}
                             >
                                 <Button className="flex-1 sm:flex-none h-10 sm:h-11 md:h-14 text-xs sm:text-sm md:text-lg px-2 sm:px-8" asChild>
                                     <a href="#contact">
@@ -82,6 +86,7 @@ export default function Hero({ onOpenServices }: HeroProps) {
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 0.8, delay: 0.6 }}
                                 className="hidden lg:flex pt-4 lg:pt-8 flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-8 text-neutral/60 dark:text-brand-pink/70 text-sm sm:text-base"
+                                style={{ touchAction: 'pan-y' }}
                             >
                                 <div>
                                     <span className="font-medium">{t('hero.badges.specialists')}</span>
