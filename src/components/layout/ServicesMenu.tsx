@@ -84,6 +84,11 @@ const services: Service[] = [
         fullName: "Yakka-dastur asosida tuzilgan davo dasturi (Qadam analiziga ko'ra)",
         price: "300 000 so'm",
     },
+    {
+        shortName: "Shrot-terapiya",
+        fullName: "Shrot-terapiya",
+        price: "200 000 so'm",
+    },
 ];
 
 interface ServicesMenuProps {
