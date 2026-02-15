@@ -63,64 +63,74 @@ export function Navbar() {
             {/* Mobile Menu */}
             <AnimatePresence>
                 {isOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="md:hidden absolute top-14 left-0 w-full bg-background dark:bg-brand-dark border-b border-neutral/5 dark:border-white/10 overflow-hidden shadow-lg"
-                    >
+                    <>
+                        {/* Backdrop - click to close */}
                         <motion.div
-                            className="p-4 flex flex-col gap-4"
-                            initial="hidden"
-                            animate="show"
-                            variants={{
-                                hidden: { opacity: 0 },
-                                show: {
-                                    opacity: 1,
-                                    transition: {
-                                        staggerChildren: 0.1,
-                                        delayChildren: 0.1
-                                    }
-                                }
-                            }}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setIsOpen(false)}
+                            className="md:hidden fixed inset-0 top-14 bg-black/40 z-40"
+                        />
+                        <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="md:hidden absolute top-14 left-0 w-full bg-background dark:bg-brand-dark border-b border-neutral/5 dark:border-white/10 overflow-hidden shadow-lg z-50"
                         >
-                            {[
-                                { href: "#about", label: t('nav.about') },
-                                { href: "#services", label: t('nav.services') },
-                                { href: "#contact", label: t('nav.contact') }
-                            ].map((item, idx) => (
-                                <motion.a
-                                    key={idx}
-                                    href={item.href}
-                                    className="text-lg font-medium py-2 border-b border-neutral/5 dark:border-white/10 dark:text-brand-pink"
-                                    onClick={() => setIsOpen(false)}
+                            <motion.div
+                                className="p-4 flex flex-col gap-4"
+                                initial="hidden"
+                                animate="show"
+                                variants={{
+                                    hidden: { opacity: 0 },
+                                    show: {
+                                        opacity: 1,
+                                        transition: {
+                                            staggerChildren: 0.1,
+                                            delayChildren: 0.1
+                                        }
+                                    }
+                                }}
+                            >
+                                {[
+                                    { href: "#about", label: t('nav.about') },
+                                    { href: "#services", label: t('nav.services') },
+                                    { href: "#contact", label: t('nav.contact') }
+                                ].map((item, idx) => (
+                                    <motion.a
+                                        key={idx}
+                                        href={item.href}
+                                        className="text-lg font-medium py-2 border-b border-neutral/5 dark:border-white/10 dark:text-brand-pink"
+                                        onClick={() => setIsOpen(false)}
+                                        variants={{
+                                            hidden: { x: 50, opacity: 0 },
+                                            show: { x: 0, opacity: 1, transition: { type: "spring", stiffness: 300, damping: 24 } }
+                                        }}
+                                    >
+                                        {item.label}
+                                    </motion.a>
+                                ))}
+
+                                <motion.div
+                                    className="flex flex-col gap-4 mt-2"
                                     variants={{
                                         hidden: { x: 50, opacity: 0 },
                                         show: { x: 0, opacity: 1, transition: { type: "spring", stiffness: 300, damping: 24 } }
                                     }}
                                 >
-                                    {item.label}
-                                </motion.a>
-                            ))}
-
-                            <motion.div
-                                className="flex flex-col gap-4 mt-2"
-                                variants={{
-                                    hidden: { x: 50, opacity: 0 },
-                                    show: { x: 0, opacity: 1, transition: { type: "spring", stiffness: 300, damping: 24 } }
-                                }}
-                            >
-                                <div className="flex justify-between items-center">
-                                    <ThemeToggle />
-                                    <LanguageSwitcher />
-                                </div>
-                                <Button className="w-full" asChild>
-                                    <a href="#contact" onClick={() => setIsOpen(false)}>{t('nav.book')}</a>
-                                </Button>
+                                    <div className="flex justify-between items-center">
+                                        <ThemeToggle />
+                                        <LanguageSwitcher />
+                                    </div>
+                                    <Button className="w-full" asChild>
+                                        <a href="#contact" onClick={() => setIsOpen(false)}>{t('nav.book')}</a>
+                                    </Button>
+                                </motion.div>
                             </motion.div>
                         </motion.div>
-                    </motion.div>
+                    </>
                 )}
             </AnimatePresence>
         </nav>
