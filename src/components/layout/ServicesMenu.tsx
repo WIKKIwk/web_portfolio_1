@@ -44,6 +44,11 @@ const services: Service[] = [
         fullName: "Sensor integratsiya va Kastilo Morales",
         price: "180 000 so'm",
     },
+    {
+        shortName: "Nevropatolog ko'rigi",
+        fullName: "Bolalar nevropatologi konsultatsiyasi",
+        price: "300 000 so'm",
+    },
 ];
 
 interface ServicesMenuProps {
