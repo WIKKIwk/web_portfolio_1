@@ -39,6 +39,11 @@ const services: Service[] = [
         fullName: "Yumeixo va YMT metodikasi bo'yicha kineziterapiya",
         price: "300 000 so'm",
     },
+    {
+        shortName: "Sensor integratsiya",
+        fullName: "Sensor integratsiya va Kastilo Morales",
+        price: "180 000 so'm",
+    },
 ];
 
 interface ServicesMenuProps {
