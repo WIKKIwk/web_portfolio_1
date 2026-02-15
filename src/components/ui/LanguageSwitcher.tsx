@@ -31,14 +31,6 @@ export function LanguageSwitcher() {
             >
                 RU
             </Button>
-            <Button
-                variant={getVariant('en')}
-                size="sm"
-                onClick={() => changeLanguage('en')}
-                className="px-2 min-w-[unset] h-8 text-xs font-semibold transition-all duration-300 hover:scale-110 hover:shadow-sm"
-            >
-                EN
-            </Button>
         </div>
     );
 }
