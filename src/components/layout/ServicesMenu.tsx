@@ -41,21 +41,25 @@ export function ServicesMenu({ isOpen, onClose }: ServicesMenuProps) {
                         initial={{ x: '100%' }}
                         animate={{ x: 0 }}
                         exit={{ x: '100%' }}
-                        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+                        transition={{ type: 'spring', damping: 30, stiffness: 80, mass: 1 }}
                         className="fixed top-0 right-0 h-full w-full sm:w-[400px] bg-background dark:bg-brand-dark border-l border-neutral/10 dark:border-white/10 shadow-2xl z-[999] overflow-y-auto"
                     >
-                        <div className="p-6 h-full flex flex-col">
+                        <div className="p-6 h-full flex flex-col relative">
+                            {/* Close Button - Absolute Top Right */}
+                            <button
+                                onClick={onClose}
+                                className="absolute top-6 right-6 p-2 rounded-full bg-neutral/5 dark:bg-white/5 hover:bg-neutral/10 dark:hover:bg-white/10 text-neutral/70 dark:text-white/70 hover:text-primary transition-all"
+                                aria-label="Close menu"
+                            >
+                                <X size={28} strokeWidth={2.5} />
+                            </button>
+
                             {/* Header */}
-                            <div className="flex items-center justify-between mb-8">
-                                <h2 className="text-2xl font-heading font-bold text-neutral dark:text-brand-pink">
+                            <div className="mt-4 mb-12">
+                                <h2 className="text-3xl font-heading font-bold text-neutral dark:text-brand-pink">
                                     {t('nav.services')}
                                 </h2>
-                                <button
-                                    onClick={onClose}
-                                    className="p-2 rounded-full hover:bg-neutral/5 dark:hover:bg-white/5 transition-colors text-neutral/70 dark:text-white/70 hover:text-primary"
-                                >
-                                    <X size={24} />
-                                </button>
+                                <div className="h-1 w-12 bg-primary rounded-full mt-2" />
                             </div>
 
                             {/* Content Placeholder */}
