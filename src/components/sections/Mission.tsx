@@ -221,6 +221,73 @@ export default function Mission() {
                     {missionItems.filter(item => !item.isIntro).map((item) => (
                         <MissionRow key={item.id} item={item} animationKey={animationKey} />
                     ))}
+
+                    {/* Animated Service Pills */}
+                    <motion.div
+                        className="pt-8"
+                        initial="hidden"
+                        whileInView="show"
+                        viewport={{ once: true, amount: 0.2 }}
+                        variants={{
+                            hidden: {},
+                            show: {
+                                transition: {
+                                    staggerChildren: 0.07,
+                                    delayChildren: 0.1
+                                }
+                            }
+                        }}
+                        style={{ touchAction: 'pan-y' }}
+                    >
+                        <motion.h3
+                            className="text-xl sm:text-2xl font-heading font-bold text-primary mb-6 text-center"
+                            variants={{
+                                hidden: { opacity: 0, x: -40 },
+                                show: { opacity: 1, x: 0, transition: { type: 'spring', stiffness: 200, damping: 20 } }
+                            }}
+                        >
+                            Xizmatlarimiz
+                        </motion.h3>
+                        <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
+                            {[
+                                "Kichik yoshli bolalar reabilitatsiyasi",
+                                "O'smir yoshli bolalar reabilitatsiyasi",
+                                "Egzarta kineziterapiyasi",
+                                "Kinezoteyping",
+                                "Manual terapiya va massaj",
+                                "Yumeixo terapiyasi",
+                                "Sensor integratsiya",
+                                "Nevropatolog ko'rigi",
+                                "NSG (Doppler)",
+                                "TKDS tekshiruvi",
+                                "BCS tekshiruvi",
+                                "Chanoq-son UZI",
+                                "Timus UZI",
+                                "Bolalar ExoKG",
+                                "Individual davo dasturi",
+                                "Shrot-terapiya",
+                                "LFK",
+                            ].map((name, i) => (
+                                <motion.span
+                                    key={i}
+                                    className="px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-primary/10 dark:bg-primary/20 text-primary border border-primary/20 dark:border-primary/30 cursor-default select-none"
+                                    variants={{
+                                        hidden: { opacity: 0, x: -60, scale: 0.8 },
+                                        show: {
+                                            opacity: 1,
+                                            x: 0,
+                                            scale: 1,
+                                            transition: { type: 'spring', stiffness: 200, damping: 18 }
+                                        }
+                                    }}
+                                    whileHover={{ scale: 1.08, backgroundColor: 'rgba(var(--color-primary-rgb, 231, 111, 81), 0.25)' }}
+                                    style={{ touchAction: 'pan-y' }}
+                                >
+                                    {name}
+                                </motion.span>
+                            ))}
+                        </div>
+                    </motion.div>
                 </div>
             </section>
         </>
