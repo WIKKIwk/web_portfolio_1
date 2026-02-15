@@ -54,6 +54,11 @@ const services: Service[] = [
         fullName: "NSG Doppler bilan tekshiruvi",
         price: "200 000 so'm",
     },
+    {
+        shortName: "TKDS tekshiruvi",
+        fullName: "TKDS",
+        price: "250 000 so'm",
+    },
 ];
 
 interface ServicesMenuProps {
