@@ -34,6 +34,11 @@ const services: Service[] = [
         fullName: "Manualka va oyoq massaji",
         price: "120 000 so'm",
     },
+    {
+        shortName: "Yumeixo terapiyasi",
+        fullName: "Yumeixo va YMT metodikasi bo'yicha kineziterapiya",
+        price: "300 000 so'm",
+    },
 ];
 
 interface ServicesMenuProps {
