@@ -29,6 +29,11 @@ const services: Service[] = [
         fullName: "Kinezoteiping",
         price: "100 000 so'm",
     },
+    {
+        shortName: "Manual terapiya va massaj",
+        fullName: "Manualka va oyoq massaji",
+        price: "120 000 so'm",
+    },
 ];
 
 interface ServicesMenuProps {
