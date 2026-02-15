@@ -14,6 +14,11 @@ const services: Service[] = [
         fullName: 'Kompleks nevro-reabilitatsiya bolalar "0" dan "5" yoshgacha (Bobat, Voyta, YMT, reflekslarni integratsiya qilish)',
         price: "180 000 so'm",
     },
+    {
+        shortName: "O'smir yoshli bolalar reabilitatsiyasi",
+        fullName: "Kompleks nevro-reabilitatsiya bolalar 5 dan 14 yoshgacha (Voyta, Bobat, YMT, med.nozhi va vakuum metodikalari)",
+        price: "220 000 so'm",
+    },
 ];
 
 interface ServicesMenuProps {
