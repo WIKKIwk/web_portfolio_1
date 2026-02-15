@@ -19,6 +19,11 @@ const services: Service[] = [
         fullName: "Kompleks nevro-reabilitatsiya bolalar 5 dan 14 yoshgacha (Voyta, Bobat, YMT, med.nozhi va vakuum metodikalari)",
         price: "220 000 so'm",
     },
+    {
+        shortName: "Egzarta kineziterapiyasi",
+        fullName: "Egzarta tizimida kineziterapiya",
+        price: "150 000 so'm",
+    },
 ];
 
 interface ServicesMenuProps {
