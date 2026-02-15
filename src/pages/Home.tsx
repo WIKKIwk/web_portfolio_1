@@ -1,10 +1,15 @@
 import Hero from '../components/sections/Hero';
 import Mission from '../components/sections/Mission';
+import { ServicesMenu } from '../components/layout/ServicesMenu';
+import { useState } from 'react';
 
-export function Home() {
+export default function Home() {
+    const [isServicesOpen, setIsServicesOpen] = useState(false);
+
     return (
         <>
-            <Hero />
+            <ServicesMenu isOpen={isServicesOpen} onClose={() => setIsServicesOpen(false)} />
+            <Hero onOpenServices={() => setIsServicesOpen(true)} />
             <Mission />
         </>
     );

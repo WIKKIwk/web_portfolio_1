@@ -3,7 +3,11 @@ import { AnimatedHero } from '../icons/AnimatedHero';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
-export default function Hero() {
+interface HeroProps {
+    onOpenServices?: () => void;
+}
+
+export default function Hero({ onOpenServices }: HeroProps) {
     const { t } = useTranslation();
 
     return (
@@ -67,7 +71,7 @@ export default function Hero() {
                                 <Button
                                     variant="outline"
                                     className="flex-1 sm:flex-none h-10 sm:h-11 md:h-14 text-xs sm:text-sm md:text-lg px-2 sm:px-8"
-                                    onClick={() => window.dispatchEvent(new CustomEvent('open-navigation-menu'))}
+                                    onClick={onOpenServices}
                                 >
                                     {t('hero.buttons.services')}
                                 </Button>
