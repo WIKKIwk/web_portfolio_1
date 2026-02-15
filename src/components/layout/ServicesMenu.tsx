@@ -49,6 +49,11 @@ const services: Service[] = [
         fullName: "Bolalar nevropatologi konsultatsiyasi",
         price: "300 000 so'm",
     },
+    {
+        shortName: "NSG (Doppler)",
+        fullName: "NSG Doppler bilan tekshiruvi",
+        price: "200 000 so'm",
+    },
 ];
 
 interface ServicesMenuProps {
