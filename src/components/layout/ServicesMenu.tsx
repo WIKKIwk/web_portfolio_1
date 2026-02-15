@@ -89,6 +89,11 @@ const services: Service[] = [
         fullName: "Shrot-terapiya",
         price: "200 000 so'm",
     },
+    {
+        shortName: "LFK (Davolash badantarbiyasi)",
+        fullName: "LFK",
+        price: "200 000 so'm",
+    },
 ];
 
 interface ServicesMenuProps {
