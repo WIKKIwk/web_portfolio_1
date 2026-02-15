@@ -5,6 +5,13 @@
 @tailwind utilities;
 
 @layer base {
+
+  html,
+  body {
+    touch-action: manipulation;
+    -webkit-overflow-scrolling: touch;
+  }
+
   body {
     @apply bg-background text-neutral font-sans antialiased;
   }
