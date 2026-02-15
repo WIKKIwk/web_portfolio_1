@@ -170,35 +170,22 @@ export function ServicesMenu({ isOpen, onClose }: ServicesMenuProps) {
                                 </div>
 
                                 {/* Services Accordion */}
-                                <motion.div
-                                    className="flex flex-col gap-2"
-                                    initial="hidden"
-                                    animate="show"
-                                    variants={{
-                                        hidden: {},
-                                        show: {
-                                            transition: {
-                                                staggerChildren: 0.06,
-                                                delayChildren: 0.15
-                                            }
-                                        }
-                                    }}
-                                >
+                                <div className="flex flex-col gap-2">
                                     {services.map((service, index) => {
                                         const isExpanded = openIndex === index;
                                         return (
                                             <motion.div
                                                 key={index}
                                                 className="rounded-2xl border border-neutral/10 dark:border-white/10 overflow-hidden transition-colors"
-                                                variants={{
-                                                    hidden: { opacity: 0, x: -50, scale: 0.95 },
-                                                    show: {
-                                                        opacity: 1,
-                                                        x: 0,
-                                                        scale: 1,
-                                                        transition: { type: 'spring', stiffness: 250, damping: 20 }
-                                                    }
+                                                initial={{ opacity: 0, x: -50, scale: 0.95 }}
+                                                whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                                                transition={{
+                                                    type: 'spring',
+                                                    stiffness: 250,
+                                                    damping: 20,
+                                                    delay: index * 0.05
                                                 }}
+                                                viewport={{ once: false, amount: 0.3 }}
                                                 style={{ touchAction: 'pan-y' }}
                                             >
                                                 {/* Short Name Row */}
@@ -252,7 +239,7 @@ export function ServicesMenu({ isOpen, onClose }: ServicesMenuProps) {
                                             </motion.div>
                                         );
                                     })}
-                                </motion.div>
+                                </div>
 
                                 {/* Footer */}
                                 <div className="mt-auto pt-6 border-t border-neutral/5 dark:border-white/5 text-center text-xs text-neutral/40 dark:text-white/30">
