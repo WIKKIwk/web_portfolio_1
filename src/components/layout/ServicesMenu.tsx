@@ -79,6 +79,11 @@ const services: Service[] = [
         fullName: "Bolalar EyoKG",
         price: "300 000 so'm",
     },
+    {
+        shortName: "Individual davo dasturi",
+        fullName: "Yakka-dastur asosida tuzilgan davo dasturi (Qadam analiziga ko'ra)",
+        price: "300 000 so'm",
+    },
 ];
 
 interface ServicesMenuProps {
