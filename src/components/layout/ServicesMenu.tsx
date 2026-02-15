@@ -64,6 +64,11 @@ const services: Service[] = [
         fullName: "BCS",
         price: "300 000 so'm",
     },
+    {
+        shortName: "Chanoq-son UZI (1 yoshgacha)",
+        fullName: "TBS UZI 1 yoshgacha bo'lgan bolalarda",
+        price: "150 000 so'm",
+    },
 ];
 
 interface ServicesMenuProps {
