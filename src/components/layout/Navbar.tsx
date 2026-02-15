@@ -70,14 +70,14 @@ export function Navbar() {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             onClick={() => setIsOpen(false)}
-                            className="md:hidden fixed inset-0 top-14 bg-black/40 z-40"
+                            className="md:hidden fixed inset-0 bg-black/40 z-[998]"
                         />
                         <motion.div
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: "auto" }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.3 }}
-                            className="md:hidden absolute top-14 left-0 w-full bg-background dark:bg-brand-dark border-b border-neutral/5 dark:border-white/10 overflow-hidden shadow-lg z-50"
+                            className="md:hidden fixed top-14 left-0 w-full bg-background dark:bg-brand-dark border-b border-neutral/5 dark:border-white/10 overflow-hidden shadow-lg z-[999]"
                         >
                             <motion.div
                                 className="p-4 flex flex-col gap-4"
