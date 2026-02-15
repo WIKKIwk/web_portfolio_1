@@ -64,10 +64,12 @@ export default function Hero() {
                                         {t('hero.buttons.book')}
                                     </a>
                                 </Button>
-                                <Button variant="outline" asChild className="flex-1 sm:flex-none h-10 sm:h-11 md:h-14 text-xs sm:text-sm md:text-lg px-2 sm:px-8">
-                                    <a href="#services">
-                                        {t('hero.buttons.services')}
-                                    </a>
+                                <Button
+                                    variant="outline"
+                                    className="flex-1 sm:flex-none h-10 sm:h-11 md:h-14 text-xs sm:text-sm md:text-lg px-2 sm:px-8"
+                                    onClick={() => window.dispatchEvent(new CustomEvent('open-navigation-menu'))}
+                                >
+                                    {t('hero.buttons.services')}
                                 </Button>
                             </motion.div>
 

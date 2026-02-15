@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '../ui/Button';
 import { ThemeToggle } from '../ui/ThemeToggle';
@@ -8,6 +8,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const { t } = useTranslation();
+
+    useEffect(() => {
+        const handleOpenMenu = () => setIsOpen(true);
+        window.addEventListener('open-navigation-menu', handleOpenMenu);
+        return () => window.removeEventListener('open-navigation-menu', handleOpenMenu);
+    }, []);
 
     return (
         <nav className="sticky top-0 z-50 w-full bg-background/80 dark:bg-brand-dark/90 backdrop-blur-md border-b border-neutral/5 dark:border-white/10">
