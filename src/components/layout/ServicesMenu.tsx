@@ -74,6 +74,11 @@ const services: Service[] = [
         fullName: "Timus UZI",
         price: "200 000 so'm",
     },
+    {
+        shortName: "Bolalar ExoKG",
+        fullName: "Bolalar EyoKG",
+        price: "300 000 so'm",
+    },
 ];
 
 interface ServicesMenuProps {
