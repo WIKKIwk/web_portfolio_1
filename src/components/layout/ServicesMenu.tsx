@@ -24,6 +24,11 @@ const services: Service[] = [
         fullName: "Egzarta tizimida kineziterapiya",
         price: "150 000 so'm",
     },
+    {
+        shortName: "Kinezoteyping",
+        fullName: "Kinezoteiping",
+        price: "100 000 so'm",
+    },
 ];
 
 interface ServicesMenuProps {
