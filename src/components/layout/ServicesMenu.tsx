@@ -47,16 +47,18 @@ export function ServicesMenu({ isOpen, onClose }: ServicesMenuProps) {
                         >
                             <div className="p-6 md:p-8 h-full flex flex-col relative overflow-y-auto">
                                 {/* Close Button - Absolute Top Right */}
-                                <button
+                                <motion.button
                                     onClick={onClose}
-                                    className="absolute top-6 right-6 p-2 rounded-full bg-neutral/5 dark:bg-white/5 hover:bg-neutral/10 dark:hover:bg-white/10 text-neutral/70 dark:text-white/70 hover:text-primary transition-all"
+                                    whileHover={{ scale: 1.1, rotate: 90 }}
+                                    whileTap={{ scale: 0.9 }}
+                                    className="absolute top-6 right-6 p-2 text-neutral/50 dark:text-white/50 hover:text-primary transition-colors"
                                     aria-label="Close menu"
                                 >
-                                    <X size={28} strokeWidth={2.5} />
-                                </button>
+                                    <X size={24} strokeWidth={2.5} />
+                                </motion.button>
 
                                 {/* Header */}
-                                <div className="mt-4 mb-12">
+                                <div className="mb-8">
                                     <h2 className="text-3xl font-heading font-bold text-neutral dark:text-brand-pink">
                                         {t('nav.services')}
                                     </h2>
