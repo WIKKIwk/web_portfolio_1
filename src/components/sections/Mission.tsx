@@ -80,6 +80,7 @@ function IntroRow({ item, animationKey }: { item: MissionItem; animationKey: num
             transition={{ duration: 0.8 }}
             viewport={{ once: true, amount: 0.2 }}
             onViewportEnter={() => setHasInView(true)}
+            style={{ touchAction: 'pan-y' }}
         >
             {/* Centered SVG - larger */}
             <div className="w-full max-w-4xl">
@@ -146,6 +147,7 @@ function MissionRow({ item, animationKey }: { item: MissionItem; animationKey: n
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true, amount: 0.8 }}
                 onViewportEnter={() => setHasInView(true)}
+                style={{ touchAction: 'pan-y' }}
             >
                 <div className="w-full relative" style={{ aspectRatio: '2816/1536' }}>
                     {hasInView ? (
@@ -169,6 +171,7 @@ function MissionRow({ item, animationKey }: { item: MissionItem; animationKey: n
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true, amount: 0.8 }}
+                style={{ touchAction: 'pan-y' }}
             >
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-primary">
                     {item.title}
