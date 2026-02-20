@@ -1,67 +1,58 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
-interface MissionItem {
+interface MissionItemConfig {
     id: number;
-    title: string;
-    text: string;
     imageSrc: string;
     imageAlt: string;
     reverse?: boolean;
     isIntro?: boolean;
 }
 
-const missionItems: MissionItem[] = [
+interface IntroPoint {
+    bold: string;
+    text: string;
+}
+
+interface IntroContent {
+    title: string;
+    description: string;
+    points: IntroPoint[];
+}
+
+interface MissionItemContent {
+    title: string;
+    text: string;
+}
+
+const missionConfig: MissionItemConfig[] = [
     {
         id: 0,
-        title: "Stupenki Kids — Mehr va Bilim Uyg'unligi",
-        text: `"Stupenki Kids" bolalar neyroreabilitatsiya markazi — bu shunchaki tibbiy muassasa emas, balki har bir bolajon o'zining yangi imkoniyatlarini kashf etadigan maskandir. Biz bolalar neyrologiyasi va ortopediyasi sohasida xalqaro tajribani O'zbekistonga olib kirdik.
-
-Nima uchun ota-onalar aynan bizni tanlashadi?
-
-Xalqaro darajadagi mutaxassislar: Bizning shifokorlarimiz tibbiy ma'lumotga ega bo'lib, o'z malakalarini xorijiy davlatlarda oshirgan haqiqiy professionallardir.
-
-Yuqori ishonch va e'tirof: 2GIS va Yandex Maps platformalarida ota-onalar bizni 4.9/5 ball bilan baholashgan. Foydalanuvchilar markazimizning tozaligi, xodimlarning xushmuomalaligi va, eng muhimi, davolash natijalaridan mamnun ekanliklarini alohida ta'kidlashadi.
-
-Aniq va tezkor natijalar: Biz vaqtning qadrini bilamiz. Masalan, qomatni tiklash (osanka) yoki nutq rivojlanishi kabi yo'nalishlarda bor-yo'g'i 20 ta mashg'ulotdan so'ng sezilarli ijobiy o'zgarishlarni ko'rishingiz mumkin.
-
-Shinam va xavfsiz muhit: Markazimiz har bir kichik mehmonimiz o'zini uydagidek erkin his qilishi uchun shinam, ozoda va zamonaviy jihozlangan.
-
-Bizning qadriyatlarimiz
-
-Biz reabilitatsiyaga nafaqat jismoniy mashqlar, balki bolaning ruhiy xotirjamligi va rivojlanishidagi har bir kichik "zina" (stupenka) sifatida qaraymiz. Biz bilan har bir qadam ishonchli, har bir natija esa quvonchlidir!`,
         imageSrc: `${import.meta.env.BASE_URL}mission_intro.svg`,
         imageAlt: "Stupenki Kids - Intro",
         isIntro: true
     },
     {
         id: 1,
-        title: "Har bir qadamda biz siz bilanmiz.",
-        text: "\"Stupenki Kids\" — bu shunchaki reabilitatsiya markazi emas, bu farzandingizning kichik g'alabalaridan katta muvaffaqiyatlar sari qurilgan yo'ldir. Biz har bir bolajonning qobiliyatiga ishonamiz va ularning rivojlanish zinalaridan dadil ko'tarilishiga mehr bilan ko'maklashamiz.",
         imageSrc: `${import.meta.env.BASE_URL}mission_kids.svg`,
         imageAlt: "Mission illustration - Helping kids",
         reverse: false
     },
     {
         id: 2,
-        title: "Harakat erkinligini his eting.",
-        text: "Bizning markazimizda qo'llaniladigan Ekzarta va PNF kabi zamonaviy usullar farzandingizga o'z tanasini boshqarishni o'rgatadi. Maxsus osma tizimlar yordamida bajariladigan mashqlar nafaqat mushaklarni mustahkamlaydi, balki bolajonlarga harakatlanish quvonchini va parvoz zavqini hadya etadi.",
         imageSrc: `${import.meta.env.BASE_URL}mission_freedom.svg`,
         imageAlt: "Mission illustration - Freedom of movement",
         reverse: true
     },
     {
         id: 3,
-        title: "To'g'ri tashxis — muvaffaqiyatli davolash garovi.",
-        text: "Bizning markazimizda UZI va neyrologik diagnostika eng zamonaviy uskunalar yordamida, mutaxassislar nazorati ostida o'tkaziladi. Farzandingiz sog'lig'idagi har bir o'zgarishni va rivojlanish jarayonini aniq tahlil qilish orqali biz eng samarali davolash rejasini tuzamiz. Aniqlik va tajriba — bizning bosh mezonimiz.",
         imageSrc: `${import.meta.env.BASE_URL}mission_diagnosis.svg`,
         imageAlt: "Mission illustration - Diagnosis",
         reverse: false
     },
     {
         id: 4,
-        title: "Sog'lom o'sish — bizning g'amxo'rligimizda.",
-        text: "Bolajonlarning oyoq kafti va umurtqa pog'onasi bilan bog'liq muammolarini (yassi oyoqlik, skolioz) zamonaviy usullar bilan bartaraf etamiz. Shifokorlarimizning ehtiyotkor qo'llari va xalqaro tajribasi farzandingizning qadamlarini ishonchli va og'riqsiz qiladi. Kichik g'alabalardan katta natijalar sari birga boramiz!",
         imageSrc: `${import.meta.env.BASE_URL}mission_ortho.svg`,
         imageAlt: "Mission illustration - Healthy Growth",
         reverse: true
@@ -69,7 +60,7 @@ Biz reabilitatsiyaga nafaqat jismoniy mashqlar, balki bolaning ruhiy xotirjamlig
 ];
 
 // Intro section with centered SVG and full-width text
-function IntroRow({ item, animationKey }: { item: MissionItem; animationKey: number }) {
+function IntroRow({ item, content, animationKey }: { item: MissionItemConfig; content: IntroContent; animationKey: number }) {
     const [hasInView, setHasInView] = useState(false);
 
     return (
@@ -102,31 +93,18 @@ function IntroRow({ item, animationKey }: { item: MissionItem; animationKey: num
             {/* Full-width prose text */}
             <div className="-mt-24 md:-mt-20 lg:-mt-40 w-full max-w-6xl space-y-6">
                 <h2 className="text-2xl md:text-3xl lg:text-5xl font-heading font-bold text-primary">
-                    {item.title}
+                    {content.title}
                 </h2>
-                <div className="text-base md:text-lg text-neutral/70 dark:text-brand-pink/80 leading-relaxed whitespace-pre-line">
-                    {item.text.split('\n').map((line, i) => {
-                        // Bold specific headers/keys
-                        const boldPrefixes = [
-                            "Nima uchun ota-onalar aynan bizni tanlashadi?",
-                            "Xalqaro darajadagi mutaxassislar:",
-                            "Yuqori ishonch va e'tirof:",
-                            "Aniq va tezkor natijalar:",
-                            "Shinam va xavfsiz muhit:",
-                            "Bizning qadriyatlarimiz"
-                        ];
-                        const startsWithBold = boldPrefixes.find(prefix => line.startsWith(prefix));
-
-                        if (startsWithBold) {
-                            const rest = line.substring(startsWithBold.length);
-                            return (
-                                <span key={i} className="block mb-2">
-                                    <strong className="text-neutral dark:text-brand-pink font-bold">{startsWithBold}</strong>{rest}
-                                </span>
-                            );
-                        }
-                        return <span key={i} className="block mb-2">{line}</span>;
-                    })}
+                <div className="text-base md:text-lg text-neutral/70 dark:text-brand-pink/80 leading-relaxed whitespace-pre-line text-left md:text-center">
+                    <p className="mb-4">{content.description}</p>
+                    <div className="space-y-2">
+                        {content.points.map((point, i) => (
+                            <div key={i}>
+                                {point.bold && <strong className="text-neutral dark:text-brand-pink font-bold block md:inline md:mr-1">{point.bold}</strong>}
+                                {point.text}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </motion.div>
@@ -134,7 +112,7 @@ function IntroRow({ item, animationKey }: { item: MissionItem; animationKey: num
 }
 
 // Regular mission row (left-right or right-left layout)
-function MissionRow({ item, animationKey }: { item: MissionItem; animationKey: number }) {
+function MissionRow({ item, content, animationKey }: { item: MissionItemConfig; content: MissionItemContent; animationKey: number }) {
     const [hasInView, setHasInView] = useState(false);
 
     return (
@@ -174,10 +152,10 @@ function MissionRow({ item, animationKey }: { item: MissionItem; animationKey: n
                 style={{ touchAction: 'pan-y' }}
             >
                 <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-heading font-bold text-primary">
-                    {item.title}
+                    {content.title}
                 </h2>
                 <p className="text-sm sm:text-base md:text-lg text-neutral/70 dark:text-brand-pink/80 leading-relaxed">
-                    {item.text}
+                    {content.text}
                 </p>
             </motion.div>
         </div>
@@ -185,7 +163,12 @@ function MissionRow({ item, animationKey }: { item: MissionItem; animationKey: n
 }
 
 export default function Mission() {
+    const { t } = useTranslation();
     const [animationKey, setAnimationKey] = useState(0);
+
+    // Get translated content
+    const introContent = t('mission.intro', { returnObjects: true }) as IntroContent;
+    const missionItemsContent = t('mission.items', { returnObjects: true }) as MissionItemContent[];
 
     useEffect(() => {
         const observer = new MutationObserver((mutations) => {
@@ -209,8 +192,8 @@ export default function Mission() {
             {/* About Section - Intro Only */}
             <section id="about" className="-mt-24 md:-mt-32 pt-0 pb-12 bg-background dark:bg-brand-dark overflow-hidden scroll-mt-20 relative z-0">
                 <div className="container mx-auto px-4 md:px-6">
-                    {missionItems.filter(item => item.isIntro).map((item) => (
-                        <IntroRow key={item.id} item={item} animationKey={animationKey} />
+                    {missionConfig.filter(item => item.isIntro).map((item) => (
+                        <IntroRow key={item.id} item={item} content={introContent} animationKey={animationKey} />
                     ))}
                 </div>
             </section>
@@ -218,8 +201,8 @@ export default function Mission() {
             {/* Services Section - 4 Mission Rows */}
             <section id="services" className="pt-12 pb-12 bg-background dark:bg-brand-dark overflow-hidden scroll-mt-20">
                 <div className="container mx-auto px-4 md:px-6 space-y-12">
-                    {missionItems.filter(item => !item.isIntro).map((item) => (
-                        <MissionRow key={item.id} item={item} animationKey={animationKey} />
+                    {missionConfig.filter(item => !item.isIntro).map((item, index) => (
+                        <MissionRow key={item.id} item={item} content={missionItemsContent[index]} animationKey={animationKey} />
                     ))}
                 </div>
             </section>

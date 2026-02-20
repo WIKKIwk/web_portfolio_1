@@ -8,93 +8,13 @@ interface Service {
     price: string;
 }
 
-const services: Service[] = [
-    {
-        shortName: "Kichik yoshli bolalar reabilitatsiyasi",
-        fullName: 'Kompleks nevro-reabilitatsiya bolalar "0" dan "5" yoshgacha (Bobat, Voyta, YMT, reflekslarni integratsiya qilish)',
-        price: "180 000 so'm",
-    },
-    {
-        shortName: "O'smir yoshli bolalar reabilitatsiyasi",
-        fullName: "Kompleks nevro-reabilitatsiya bolalar 5 dan 14 yoshgacha (Voyta, Bobat, YMT, med.nozhi va vakuum metodikalari)",
-        price: "220 000 so'm",
-    },
-    {
-        shortName: "Egzarta kineziterapiyasi",
-        fullName: "Egzarta tizimida kineziterapiya",
-        price: "150 000 so'm",
-    },
-    {
-        shortName: "Kinezoteyping",
-        fullName: "Kinezoteiping",
-        price: "100 000 so'm",
-    },
-    {
-        shortName: "Manual terapiya va massaj",
-        fullName: "Manualka va oyoq massaji",
-        price: "120 000 so'm",
-    },
-    {
-        shortName: "Yumeixo terapiyasi",
-        fullName: "Yumeixo va YMT metodikasi bo'yicha kineziterapiya",
-        price: "300 000 so'm",
-    },
-    {
-        shortName: "Sensor integratsiya",
-        fullName: "Sensor integratsiya va Kastilo Morales",
-        price: "180 000 so'm",
-    },
-    {
-        shortName: "Nevropatolog ko'rigi",
-        fullName: "Bolalar nevropatologi konsultatsiyasi",
-        price: "300 000 so'm",
-    },
-    {
-        shortName: "NSG (Doppler)",
-        fullName: "NSG Doppler bilan tekshiruvi",
-        price: "200 000 so'm",
-    },
-    {
-        shortName: "TKDS tekshiruvi",
-        fullName: "TKDS",
-        price: "250 000 so'm",
-    },
-    {
-        shortName: "BCS tekshiruvi",
-        fullName: "BCS",
-        price: "300 000 so'm",
-    },
-    {
-        shortName: "Chanoq-son UZI (1 yoshgacha)",
-        fullName: "TBS UZI 1 yoshgacha bo'lgan bolalarda",
-        price: "150 000 so'm",
-    },
-    {
-        shortName: "Timus UZI",
-        fullName: "Timus UZI",
-        price: "200 000 so'm",
-    },
-    {
-        shortName: "Bolalar ExoKG",
-        fullName: "Bolalar EyoKG",
-        price: "300 000 so'm",
-    },
-    {
-        shortName: "Individual davo dasturi",
-        fullName: "Yakka-dastur asosida tuzilgan davo dasturi (Qadam analiziga ko'ra)",
-        price: "300 000 so'm",
-    },
-    {
-        shortName: "Shrot-terapiya",
-        fullName: "Shrot-terapiya",
-        price: "200 000 so'm",
-    },
-    {
-        shortName: "LFK (Davolash badantarbiyasi)",
-        fullName: "LFK",
-        price: "200 000 so'm",
-    },
-];
+// Services are now loaded from translations
+interface Service {
+    shortName: string;
+    fullName: string;
+    price: string;
+}
+
 
 interface ServicesMenuProps {
     isOpen: boolean;
@@ -104,6 +24,9 @@ interface ServicesMenuProps {
 export function ServicesMenu({ isOpen, onClose }: ServicesMenuProps) {
     const { t } = useTranslation();
     const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+    // Load services from translation
+    const services = t('services_data.list', { returnObjects: true }) as Service[];
 
     // Lock body scroll when menu is open
     useEffect(() => {

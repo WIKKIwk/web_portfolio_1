@@ -44,7 +44,7 @@ export function Footer() {
                         <div className="grid grid-cols-2 gap-x-4 md:gap-x-6 gap-y-4 md:gap-y-6">
                             <div className="text-neutral/70 dark:text-brand-pink/70">
                                 <div className="font-semibold text-sm md:text-base text-neutral dark:text-brand-pink mb-1">{t('footer.address_label')}</div>
-                                <span className="text-xs md:text-sm">Toshkent sh., Yunusobod t.,<br />Amir Temur prospekti, 127-uy</span>
+                                <span className="text-xs md:text-sm" dangerouslySetInnerHTML={{ __html: t('footer.address_value') }} />
                             </div>
                             <div className="text-neutral/70 dark:text-brand-pink/70">
                                 <div className="font-semibold text-sm md:text-base text-neutral dark:text-brand-pink mb-1">{t('footer.phone_label')}</div>
@@ -59,7 +59,7 @@ export function Footer() {
                             </div>
                             <div className="text-neutral/70 dark:text-brand-pink/70">
                                 <div className="font-semibold text-sm md:text-base text-neutral dark:text-brand-pink mb-1">{t('footer.facebook_label')}</div>
-                                <a href="https://www.facebook.com/groups/stupenki.kids" target="_blank" rel="noopener noreferrer" className="hover:text-primary text-xs md:text-sm">Facebook guruh</a>
+                                <a href="https://www.facebook.com/groups/stupenki.kids" target="_blank" rel="noopener noreferrer" className="hover:text-primary text-xs md:text-sm">{t('footer.facebook_link_text')}</a>
                             </div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@ export function Footer() {
                 <div className="mb-12">
                     <div className="text-center mb-6">
                         <h3 className="text-3xl font-heading font-bold text-neutral dark:text-brand-pink mb-2">{t('footer.map_title')}</h3>
-                        <p className="text-neutral/60 dark:text-brand-pink/60">Amir Temur prospekti 127, Yunusobod, Toshkent</p>
+                        <p className="text-neutral/60 dark:text-brand-pink/60">{t('footer.map_address')}</p>
                     </div>
 
                     {/* Map Container with Gradient Accent */}
@@ -99,7 +99,7 @@ export function Footer() {
                                 className="absolute top-2 left-2 bg-white dark:bg-brand-dark text-neutral dark:text-brand-pink px-6 py-3 rounded-full shadow-lg font-bold text-base hover:scale-105 transition-transform z-10 flex items-center gap-2 border border-neutral/10 dark:border-brand-pink/20"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11" /></svg>
-                                Yandex Xarita
+                                {t('footer.yandex_button')}
                             </a>
                         </div>
 

@@ -24,12 +24,160 @@
     },
     "footer": {
         "map_title": "Bizni xaritada toping",
+        "map_address": "Amir Temur prospekti 127, Yunusobod, Toshkent",
+        "yandex_button": "Yandex Xarita",
         "address_label": "Manzil:",
+        "address_value": "Toshkent sh., Yunusobod t.,<br />Amir Temur prospekti, 127-uy",
         "phone_label": "Telefon:",
         "instagram_label": "Instagram:",
         "facebook_label": "Facebook:",
+        "facebook_link_text": "Facebook guruh",
         "links_title": "Tezkor Havolalar",
         "contact_title": "Bog'lanish",
         "copyright": "© {{year}} Stupenki Kids. Barcha huquqlar himoyalangan."
+    },
+    "mission": {
+        "intro": {
+            "title": "Stupenki Kids — Mehr va Bilim Uyg'unligi",
+            "description": "\"Stupenki Kids\" bolalar neyroreabilitatsiya markazi — bu shunchaki tibbiy muassasa emas, balki har bir bolajon o'zining yangi imkoniyatlarini kashf etadigan maskandir. Biz bolalar neyrologiyasi va ortopediyasi sohasida xalqaro tajribani O'zbekistonga olib kirdik.",
+            "points": [
+                {
+                    "bold": "Nima uchun ota-onalar aynan bizni tanlashadi?",
+                    "text": ""
+                },
+                {
+                    "bold": "Xalqaro darajadagi mutaxassislar:",
+                    "text": " Bizning shifokorlarimiz tibbiy ma'lumotga ega bo'lib, o'z malakalarini xorijiy davlatlarda oshirgan haqiqiy professionallardir."
+                },
+                {
+                    "bold": "Yuqori ishonch va e'tirof:",
+                    "text": " 2GIS va Yandex Maps platformalarida ota-onalar bizni 4.9/5 ball bilan baholashgan. Foydalanuvchilar markazimizning tozaligi, xodimlarning xushmuomalaligi va, eng muhimi, davolash natijalaridan mamnun ekanliklarini alohida ta'kidlashadi."
+                },
+                {
+                    "bold": "Aniq va tezkor natijalar:",
+                    "text": " Biz vaqtning qadrini bilamiz. Masalan, qomatni tiklash (osanka) yoki nutq rivojlanishi kabi yo'nalishlarda bor-yo'g'i 20 ta mashg'ulotdan so'ng sezilarli ijobiy o'zgarishlarni ko'rishingiz mumkin."
+                },
+                {
+                    "bold": "Shinam va xavfsiz muhit:",
+                    "text": " Markazimiz har bir kichik mehmonimiz o'zini uydagidek erkin his qilishi uchun shinam, ozoda va zamonaviy jihozlangan."
+                },
+                {
+                    "bold": "Bizning qadriyatlarimiz",
+                    "text": ""
+                },
+                {
+                    "bold": "",
+                    "text": "Biz reabilitatsiyaga nafaqat jismoniy mashqlar, balki bolaning ruhiy xotirjamligi va rivojlanishidagi har bir kichik \"zina\" (stupenka) sifatida qaraymiz. Biz bilan har bir qadam ishonchli, har bir natija esa quvonchlidir!"
+                }
+            ]
+        },
+        "items": [
+            {
+                "title": "Har bir qadamda biz siz bilanmiz.",
+                "text": "\"Stupenki Kids\" — bu shunchaki reabilitatsiya markazi emas, bu farzandingizning kichik g'alabalaridan katta muvaffaqiyatlar sari qurilgan yo'ldir. Biz har bir bolajonning qobiliyatiga ishonamiz va ularning rivojlanish zinalaridan dadil ko'tarilishiga mehr bilan ko'maklashamiz."
+            },
+            {
+                "title": "Harakat erkinligini his eting.",
+                "text": "Bizning markazimizda qo'llaniladigan Ekzarta va PNF kabi zamonaviy usullar farzandingizga o'z tanasini boshqarishni o'rgatadi. Maxsus osma tizimlar yordamida bajariladigan mashqlar nafaqat mushaklarni mustahkamlaydi, balki bolajonlarga harakatlanish quvonchini va parvoz zavqini hadya etadi."
+            },
+            {
+                "title": "To'g'ri tashxis — muvaffaqiyatli davolash garovi.",
+                "text": "Bizning markazimizda UZI va neyrologik diagnostika eng zamonaviy uskunalar yordamida, mutaxassislar nazorati ostida o'tkaziladi. Farzandingiz sog'lig'idagi har bir o'zgarishni va rivojlanish jarayonini aniq tahlil qilish orqali biz eng samarali davolash rejasini tuzamiz. Aniqlik va tajriba — bizning bosh mezonimiz."
+            },
+            {
+                "title": "Sog'lom o'sish — bizning g'amxo'rligimizda.",
+                "text": "Bolajonlarning oyoq kafti va umurtqa pog'onasi bilan bog'liq muammolarini (yassi oyoqlik, skolioz) zamonaviy usullar bilan bartaraf etamiz. Shifokorlarimizning ehtiyotkor qo'llari va xalqaro tajribasi farzandingizning qadamlarini ishonchli va og'riqsiz qiladi. Kichik g'alabalardan katta natijalar sari birga boramiz!"
+            }
+        ]
+    },
+    "services_data": {
+        "title": "Xizmatlarimiz",
+        "list": [
+            {
+                "shortName": "Kichik yoshli bolalar reabilitatsiyasi",
+                "fullName": "Kompleks nevro-reabilitatsiya bolalar \"0\" dan \"5\" yoshgacha (Bobat, Voyta, YMT, reflekslarni integratsiya qilish)",
+                "price": "180 000 so'm"
+            },
+            {
+                "shortName": "O'smir yoshli bolalar reabilitatsiyasi",
+                "fullName": "Kompleks nevro-reabilitatsiya bolalar 5 dan 14 yoshgacha (Voyta, Bobat, YMT, med.nozhi va vakuum metodikalari)",
+                "price": "220 000 so'm"
+            },
+            {
+                "shortName": "Egzarta kineziterapiyasi",
+                "fullName": "Egzarta tizimida kineziterapiya",
+                "price": "150 000 so'm"
+            },
+            {
+                "shortName": "Kinezoteyping",
+                "fullName": "Kinezoteiping",
+                "price": "100 000 so'm"
+            },
+            {
+                "shortName": "Manual terapiya va massaj",
+                "fullName": "Manualka va oyoq massaji",
+                "price": "120 000 so'm"
+            },
+            {
+                "shortName": "Yumeixo terapiyasi",
+                "fullName": "Yumeixo va YMT metodikasi bo'yicha kineziterapiya",
+                "price": "300 000 so'm"
+            },
+            {
+                "shortName": "Sensor integratsiya",
+                "fullName": "Sensor integratsiya va Kastilo Morales",
+                "price": "180 000 so'm"
+            },
+            {
+                "shortName": "Nevropatolog ko'rigi",
+                "fullName": "Bolalar nevropatologi konsultatsiyasi",
+                "price": "300 000 so'm"
+            },
+            {
+                "shortName": "NSG (Doppler)",
+                "fullName": "NSG Doppler bilan tekshiruvi",
+                "price": "200 000 so'm"
+            },
+            {
+                "shortName": "TKDS tekshiruvi",
+                "fullName": "TKDS",
+                "price": "250 000 so'm"
+            },
+            {
+                "shortName": "BCS tekshiruvi",
+                "fullName": "BCS",
+                "price": "300 000 so'm"
+            },
+            {
+                "shortName": "Chanoq-son UZI (1 yoshgacha)",
+                "fullName": "TBS UZI 1 yoshgacha bo'lgan bolalarda",
+                "price": "150 000 so'm"
+            },
+            {
+                "shortName": "Timus UZI",
+                "fullName": "Timus UZI",
+                "price": "200 000 so'm"
+            },
+            {
+                "shortName": "Bolalar ExoKG",
+                "fullName": "Bolalar EyoKG",
+                "price": "300 000 so'm"
+            },
+            {
+                "shortName": "Individual davo dasturi",
+                "fullName": "Yakka-dastur asosida tuzilgan davo dasturi (Qadam analiziga ko'ra)",
+                "price": "300 000 so'm"
+            },
+            {
+                "shortName": "Shrot-terapiya",
+                "fullName": "Shrot-terapiya",
+                "price": "200 000 so'm"
+            },
+            {
+                "shortName": "LFK (Davolash badantarbiyasi)",
+                "fullName": "LFK",
+                "price": "200 000 so'm"
+            }
+        ]
     }
 }
